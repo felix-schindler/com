@@ -1,0 +1,16 @@
+{
+	"editor.useTabStops": true,
+	"editor.tabSize": 2,
+	"svelte.plugin.svelte.format.config.singleQuote": false,
+	"svelte.plugin.svelte.format.config.printWidth": 100,
+	"svelte.plugin.svelte.format.config.svelteAllowShorthand": true,
+	"svelte.plugin.svelte.format.config.svelteBracketNewLine": false,
+	"svelte.plugin.svelte.format.config.svelteIndentScriptAndStyle": true,
+	"svelte.plugin.svelte.format.config.svelteSortOrder": "options-scripts-markup-styles",
+	"svelte.plugin.svelte.format.config.svelteStrictMode": false,
+	"svelte.plugin.svelte.format.enable": true,
+	"editor.formatOnSave": true,
+	"files.insertFinalNewline": true,
+	"javascript.format.semicolons": "insert",
+	"typescript.format.semicolons": "insert"
+}
