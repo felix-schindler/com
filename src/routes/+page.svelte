@@ -36,20 +36,99 @@
 <div class="grid">
 	<div class="card">
 		<h1>So können wir Ihnen helfen</h1>
+		<div>
+			<h2>Beratung</h2>
+			<p>Sie wissen noch nicht was sie wollen? Unsere IT-Experten können helfen!</p>
+		</div>
+		<div>
+			<h2>Betreuung</h2>
+			<p>
+				Wir lassen Sie nie im Regeln stehen. Egal was ist und wann es passiert, wir stehen hinter
+				Ihnen und unterstützen Sie.
+			</p>
+		</div>
+		<div>
+			<h2>Entwicklung</h2>
+			<p>Wenn wir etwas entwickeln, dann mit dem Ziel des Kundens im Kopf.</p>
+		</div>
+		<div>
+			<h2>Anbindung</h2>
+			<p>An ihr bestehendes System wie SAP, Sage oder ähnliches</p>
+		</div>
 	</div>
 	<div class="card">
 		<h1>Vorteile des Webs</h1>
-		<ol>
-			<li>Immer und von überall erreichbar</li>
-			<li>Kein Update-Albtraum</li>
-			<li>Schnelligkeit</li>
-		</ol>
+		<div>
+			<h2>Immer und von überall erreichbar</h2>
+			<p>
+				Egal ob unterwegs, beim Kunden, auf dem Klo: Unsere Services sind immer erreichtbar. Selbst
+				offline.
+			</p>
+		</div>
+		<div>
+			<h2>Kein Update-Albtraum</h2>
+			<p>Updates passieren einfach, im Hintergrund. Ohne Sie oder ihre Mitarbeiter zu stören.</p>
+			<p>Keine Update-Buttons, keine veraltete Software mit Sicherheitslücken.</p>
+		</div>
+		<div>
+			<h2>Schnelligkeit</h2>
+			<p>
+				Egal, ob auf einem alten Motorola, einem Rapberry Pi oder dem neuesten Mac, es funktioniert
+				einfach.
+			</p>
+		</div>
 	</div>
 	<div class="card">
 		<h1>Warum wir?</h1>
+		<div>
+			<h2>Angenehm für die Augen</h2>
+			<p>Alle unsere Projekte kommen standardmäßig im dunklen und hellen Modus.</p>
+		</div>
+		<div>
+			<h2>Mobile First</h2>
+			<p>
+				Alle unsere Projekte kommen standardmäßig in allen Formen, damit sie immer alles im Blick
+				haben können.
+			</p>
+		</div>
+		<div>
+			<h2>Best practices</h2>
+			<p>Programmier-Paradigmen die bei uns Anwendung finden: KISS, Never repeat yourself</p>
+		</div>
+		<div>
+			<h2>Best practices</h2>
+			<p>Programmier-Paradigmen die bei uns Anwendung finden: KISS, Never repeat yourself</p>
+		</div>
+		<div>
+			<h2>Das Auge liegt im Detail</h2>
+			<em>(pictures of notch, cookie banner, install prompt android, light house)</em>
+		</div>
+		<div>
+			<h2>Sie haben nichts zu befürchten</h2>
+			<p>Wir kümmern uns um Gesetzeskonformität</p>
+		</div>
 	</div>
 	<div class="card">
 		<h1>Bisherige Projekte</h1>
+	</div>
+	<div class="card">
+		<h1>Weil wir's können.</h1>
+		<div class="half">
+			<div>
+				<h2>Serverless (Cloud)</h2>
+			</div>
+			<div>
+				<h2>Server</h2>
+			</div>
+		</div>
+		<div class="half">
+			<div>
+				<h2>Frontend</h2>
+			</div>
+			<div>
+				<h2>Backend</h2>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -107,6 +186,11 @@
 			h1 {
 				font-size: 10vw;
 			}
+		}
+
+		.half {
+			display: flex;
+			gap: 1em;
 		}
 	}
 </style>
