@@ -114,4 +114,20 @@
 			}
 		}
 	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		form.card {
+			div.btns {
+				button {
+					color: black;
+					background-color: white;
+					border-color: white;
+
+					&:hover:not(:disabled) {
+						color: white;
+					}
+				}
+			}
+		}
+	}
 </style>
