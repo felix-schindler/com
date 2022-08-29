@@ -43,6 +43,7 @@
 		align-items: center;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
+		gap: 0.5em;
 
 		div {
 			display: flex;
@@ -78,6 +79,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.5em;
 
 		div {
 			display: flex;
