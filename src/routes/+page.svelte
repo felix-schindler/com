@@ -1,4 +1,6 @@
 <script>
+	import Copyable from "$lib/components/Copyable.svelte";
+
 	let msgs = [
 		"Sie wollen Unternehmensprozesse optimieren?",
 		"Sie wollen ihre eigene Webseite?",
@@ -124,6 +126,9 @@
 		<div class="half">
 			<div>
 				<h2>Frontend</h2>
+				<p>
+					Use you're cursor, <Copyable value={"you can copy this."}>make a copy.</Copyable>
+				</p>
 			</div>
 			<div>
 				<h2>Backend</h2>
@@ -144,7 +149,7 @@
 			margin: 0;
 
 			white-space: pre-wrap;
-			font-size: 25vw;
+			font-size: 15vh;
 
 			color: transparent;
 			background-image: linear-gradient((120deg, var(--accent), blue));
@@ -162,21 +167,10 @@
 			font-weight: 500;
 			margin-top: 0;
 		}
+	}
 
-		// button {
-		// 	cursor: pointer;
-
-		// 	color: inherit;
-		// 	background-color: rgba(var(--gray-rgb), 0.2);
-
-		// 	padding: 0.4em 0.6em;
-		// 	border: 0;
-		// 	border-radius: var(--radius);
-
-		// 	&:hover {
-		// 		background-color: rgba(var(--gray-rgb), 0.4);
-		// 	}
-		// }
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	}
 
 	@media (min-width: 1366px) {
@@ -184,7 +178,7 @@
 			width: 80%;
 
 			h1 {
-				font-size: 12.5vw;
+				font-size: 22.5vh;
 			}
 		}
 
