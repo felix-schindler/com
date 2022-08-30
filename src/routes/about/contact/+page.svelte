@@ -15,13 +15,12 @@
 			success = false;
 		} else {
 			setTimeout(() => {
+				sending = false;
 				mail = "";
 				desc = "";
 				success = true;
 			}, 2500);
 		}
-
-		sending = false;
 	}
 </script>
 
@@ -71,6 +70,7 @@
 
 		textarea {
 			width: 100%;
+			font-family: var(--sans);
 		}
 
 		div.btns {

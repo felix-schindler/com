@@ -179,12 +179,12 @@
 		// }
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 1366px) {
 		div.intro {
 			width: 80%;
 
 			h1 {
-				font-size: 10vw;
+				font-size: 12.5vw;
 			}
 		}
 
