@@ -35,7 +35,7 @@
 	header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		flex-wrap: wrap;
 		gap: 0.5em;
 
@@ -59,10 +59,6 @@
 	}
 
 	@media (min-width: 1024px) {
-		header {
-			justify-content: space-evenly;
-		}
-
 		main {
 			width: 60%;
 		}
