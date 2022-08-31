@@ -12,8 +12,13 @@
 
 		setTimeout(() => {
 			action = true;
-			loading = true;
+			loading = false;
 			success = false;
+
+			if (success) {
+				mail = "";
+				pass = "";
+			}
 		}, 2500);
 	}
 </script>
@@ -31,7 +36,7 @@
 			<a href="/app/auth/forget">Passwort vegessen</a>
 			<div>
 				<button type="reset">Clear</button>
-				<button type="submit" disabled={loading || (action && success)}>
+				<button type="submit" disabled={loading || (action && success) || !mail || !pass}>
 					{#if loading}
 						<Spinner />
 					{/if}
