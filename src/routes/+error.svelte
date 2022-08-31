@@ -64,7 +64,7 @@
 		.btns {
 			margin-block: 0.25em;
 
-			button {
+			button:disabled {
 				transition: none;
 			}
 		}
