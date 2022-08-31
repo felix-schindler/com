@@ -149,7 +149,7 @@
 			margin: 0;
 
 			white-space: pre-wrap;
-			font-size: 15vh;
+			font-size: 12.5vh;
 
 			color: transparent;
 			background-image: linear-gradient((120deg, var(--accent), blue));
