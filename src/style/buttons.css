@@ -47,10 +47,8 @@ a[role="button"] {
 		border-color: white;
 	}
 
-	button,
-	:hover:not(:disabled),
+	button:hover:not(:disabled),
 	a[role="button"]:hover:not(:disabled) {
 		color: white;
-
 	}
 }
