@@ -47,13 +47,10 @@
 				margin-bottom: 1em;
 			}
 
-			span {
-				padding: 0.2em 0.4em;
-				border: 1px solid rgba(var(--gray-rgb), 0.8);
-				border-radius: var(--radius);
-			}
-
 			a {
+				user-select: none;
+				-webkit-user-select: none;
+
 				padding: 0.2em 0.4em;
 				border: 1px solid rgba(var(--gray-rgb), 0.8);
 				border-radius: var(--radius);
