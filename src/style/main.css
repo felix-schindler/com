@@ -44,10 +44,6 @@ body {
 	padding: 1em;
 }
 
-.hmf main {
-	padding: 0 1em;
-}
-
 .hmf main> :first-child {
 	margin-top: 0;
 }
