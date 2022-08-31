@@ -1,6 +1,8 @@
 button,
 a[role="button"] {
 	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
 
 	font-size: 0.9em;
 
