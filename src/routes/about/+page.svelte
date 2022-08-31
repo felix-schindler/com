@@ -69,7 +69,7 @@
 		</div>
 		<div>
 			<h2>Kein Update-Albtraum</h2>
-			<p>Updates passieren einfach, im Hintergrund. Ohne Sie oder ihre Mitarbeiter zu stören.</p>
+			<p>Updates passieren einfach, im Hintergrund. Ohne Sie oder Ihre Mitarbeiter zu stören.</p>
 			<p>Keine Update-Buttons, keine veraltete Software mit Sicherheitslücken.</p>
 		</div>
 		<div>
@@ -82,6 +82,32 @@
 	</div>
 	<div class="card">
 		<h1>Warum wir?</h1>
+		<div>
+			<details>
+				<summary role="heading">Auge für's Detail</summary>
+				<div class="card">
+					<h3>Durckbar - Printable</h3>
+					<p>
+						Wir achten generell drauf, dass unsere Webseiten ausgedruckt werden können, ohne viel
+						Tinte zu verschwenden.
+					</p>
+				</div>
+				<div class="card">
+					<h3>i18n</h3>
+					<p>
+						Man arbeitet am schnellsten, wenn es passt. Egal, ob Datumformat, Anführungszeichen.
+					</p>
+				</div>
+				<div class="card">
+					<h3>Keine Unnötige Arbeit</h3>
+					<p>
+						Wir nutzen das, was uns bereits gegeben ist. So erfinden wir zum Beispiel den Dunklen
+						Modus nicht neu, sondern nutzen das was uns der Hersteller / Browser gibt und arbeiten
+						damit.
+					</p>
+				</div>
+			</details>
+		</div>
 		<div>
 			<h2>Angenehm für die Augen</h2>
 			<p>Alle unsere Projekte kommen standardmäßig im dunklen und hellen Modus.</p>
@@ -171,6 +197,26 @@
 
 	.grid {
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+		.card {
+			details {
+				summary[role="heading"] {
+					cursor: pointer;
+
+					display: block;
+					font-size: 1.5em;
+					margin-block-start: 0.83em;
+					margin-block-end: 0.83em;
+					margin-inline-start: 0px;
+					margin-inline-end: 0px;
+					font-weight: bold;
+				}
+
+				.card:not(:last-child) {
+					margin-bottom: 0.5em;
+				}
+			}
+		}
 	}
 
 	@media (min-width: 1024px) {
