@@ -15,7 +15,7 @@
 <div class="ac">
 	<div>
 		{#if browser && window.history.length > 2}
-			<a href="#!" on:click|preventDefault={() => window.history.back()}>Zurück</a>
+			<a href="#!" on:click|preventDefault={() => window.history.back()}>&larr; Zurück</a>
 		{/if}
 		<h1>{$page.status} <small>- {$page.error.message}</small></h1>
 		<p>Wer soll für diesen Fehler gefeuert werden?</p>
@@ -51,6 +51,12 @@
 		min-height: 100vh;
 		text-align: center;
 
+		a {
+			&:hover {
+				color: var(--accent);
+			}
+		}
+
 		p {
 			margin-bottom: 0;
 		}
@@ -63,11 +69,9 @@
 			}
 		}
 
-		a {
-			text-decoration: underline;
-
-			&:hover {
-				color: var(--accent);
+		small {
+			a {
+				text-decoration: underline;
 			}
 		}
 	}
