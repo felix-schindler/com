@@ -14,7 +14,7 @@
 
 <div class="ac">
 	<div>
-		{#if browser && window.history.length > 2}
+		{#if browser && window.history.length > 1}
 			<a href="#!" on:click|preventDefault={() => window.history.back()}>&larr; Zurück</a>
 		{/if}
 		<h1>{$page.status} <small>- {$page.error.message}</small></h1>
