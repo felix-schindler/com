@@ -25,12 +25,12 @@
 </script>
 
 <svelte:head>
-	<title>Datenschutzinformation &middot; YourCompany</title>
+	<title>Kontakt &middot; YourCompany</title>
 </svelte:head>
 
 <div class="ac">
 	<form class="card" on:submit|preventDefault={submit}>
-		<h1>Contact</h1>
+		<h1>Kontakt</h1>
 		<input type="email" bind:value={mail} placeholder="Deine E-Mail" />
 		<textarea bind:value={desc} rows="7" placeholder="Beschreibung" />
 		<div class="btns">
@@ -82,53 +82,6 @@
 
 			width: 100%;
 			padding-top: 0.25em;
-
-			button {
-				cursor: pointer;
-
-				color: white;
-				background-color: black;
-				transition: 200ms color, 200ms background-color;
-
-				font-size: 0.9em;
-				padding: 0.4em 0.6em;
-				border: 1px solid black;
-				border-radius: var(--radius);
-				margin: 0;
-
-				&[type="reset"] {
-					color: white !important;
-					background-color: red !important;
-					border-color: red !important;
-				}
-
-				&:hover:not(:disabled) {
-					color: black;
-					background-color: transparent;
-				}
-
-				&:disabled {
-					cursor: not-allowed;
-					border-color: rgb(var(--gray-rgb));
-					background-color: rgb(var(--gray-rgb));
-				}
-			}
-		}
-	}
-
-	@media screen and (prefers-color-scheme: dark) {
-		form.card {
-			div.btns {
-				button {
-					color: black;
-					background-color: white;
-					border-color: white;
-
-					&:hover:not(:disabled) {
-						color: white;
-					}
-				}
-			}
 		}
 	}
 </style>

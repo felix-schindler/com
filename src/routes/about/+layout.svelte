@@ -1,5 +1,4 @@
 <script>
-	import "../../style/main.css";
 	import { page } from "$app/stores";
 	import Footer from "$lib/components/Footer.svelte";
 
@@ -49,37 +48,6 @@
 		nav {
 			.bi {
 				vertical-align: baseline;
-			}
-		}
-
-		a[role="button"] {
-			cursor: pointer;
-			color: white;
-			background-color: black;
-			padding: 0.4em 0.6em;
-			border: 1px solid black;
-			border-radius: var(--radius);
-
-			transition: 200ms color, 200ms background-color;
-			text-decoration: none !important;
-
-			&:hover {
-				color: black;
-				background-color: transparent;
-			}
-		}
-	}
-
-	@media screen and (prefers-color-scheme: dark) {
-		header {
-			a[role="button"] {
-				color: black;
-				background-color: white;
-				border-color: white;
-
-				&:hover {
-					color: white;
-				}
 			}
 		}
 	}
