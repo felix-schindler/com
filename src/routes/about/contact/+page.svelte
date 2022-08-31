@@ -60,19 +60,6 @@
 			margin-bottom: 0.4em;
 		}
 
-		input,
-		textarea {
-			font-size: 0.9em;
-			padding: 0.4em 0.6em;
-			border: 1px solid rgb(var(--gray-rgb));
-			border-radius: var(--radius);
-		}
-
-		textarea {
-			width: 100%;
-			font-family: var(--sans);
-		}
-
 		div.btns {
 			display: flex;
 			align-items: center;
