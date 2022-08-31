@@ -1,5 +1,5 @@
 <footer>
-	<span>&copy; 2022 &middot; Felix Schindler</span>
+	<span>&copy; 2022 &middot; <a href="https://schindlerfelix.de">Felix Schindler</a></span>
 	<div>
 		<a href="/about/imprint">Impressum</a>
 		<a href="/about/privacy">Datenschutzinformation</a>
