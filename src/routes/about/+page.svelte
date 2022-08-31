@@ -173,7 +173,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	}
 
-	@media (min-width: 1366px) {
+	@media (min-width: 1024px) {
 		div.intro {
 			width: 80%;
 

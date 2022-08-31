@@ -33,7 +33,7 @@
 		<h1>Kontakt</h1>
 		<input type="email" bind:value={mail} placeholder="Deine E-Mail" />
 		<textarea bind:value={desc} rows="7" placeholder="Beschreibung" />
-		<div class="btns">
+		<div class="msg-btns">
 			<span>
 				{#if success !== undefined && !sending}
 					{success ? "Nachricht gesendet" : "Nachricht konnte nicht gesendet werden"}
@@ -58,17 +58,6 @@
 
 		h1 {
 			margin-bottom: 0.4em;
-		}
-
-		div.btns {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			flex-wrap: wrap;
-			gap: 0.5em;
-
-			width: 100%;
-			padding-top: 0.25em;
 		}
 	}
 </style>

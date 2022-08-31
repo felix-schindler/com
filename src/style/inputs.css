@@ -1,3 +1,15 @@
+/* Form */
+div.msg-btns {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 0.5em;
+
+	width: 100%;
+	padding-top: 0.25em;
+}
+
 /* Inputs, (Textarea) */
 input,
 textarea {

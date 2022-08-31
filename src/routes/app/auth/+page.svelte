@@ -18,19 +18,26 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Login &middot; YourCompany</title>
+</svelte:head>
+
 <div class="ac">
 	<form on:submit|preventDefault={login} class="card">
 		<h1>Login</h1>
 		<input type="email" bind:value={mail} placeholder="E-Mail" />
 		<input type="password" bind:value={pass} placeholder="Passwort" />
-		<div class="btns">
-			<button type="reset">Clear</button>
-			<button type="submit" disabled={loading || (action && success)}>
-				{#if loading}
-					<Spinner />
-				{/if}
-				Login
-			</button>
+		<div class="msg-btns">
+			<a href="/app/auth/forget">Passwort vegessen</a>
+			<div>
+				<button type="reset">Clear</button>
+				<button type="submit" disabled={loading || (action && success)}>
+					{#if loading}
+						<Spinner />
+					{/if}
+					Login
+				</button>
+			</div>
 		</div>
 		{#if action && !success}
 			<p>Failed to log in.</p>
@@ -42,10 +49,31 @@
 	form.card {
 		display: flex;
 		flex-direction: column;
+		width: 80%;
 
-		.btns {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+		text-align: center;
+
+		.msg-btns {
+			flex-direction: column-reverse;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		form.card {
+			min-width: 525px;
+			width: auto;
+
+			input {
+				font-size: 1.1em;
+			}
+
+			button {
+				font-size: 1.05em;
+			}
+
+			.msg-btns {
+				flex-direction: row;
+			}
 		}
 	}
 </style>
