@@ -1,6 +1,4 @@
 <script>
-	import Copyable from "$lib/components/Copyable.svelte";
-
 	let msgs = [
 		"Sie wollen Unternehmensprozesse optimieren?",
 		"Sie wollen ihre eigene Webseite?",
@@ -86,6 +84,14 @@
 			<details>
 				<summary role="heading">Auge für's Detail</summary>
 				<div class="card">
+					<h3>Angenehm für die Augen</h3>
+					<p>Alle unsere Projekte kommen standardmäßig im dunklen und hellen Modus.</p>
+				</div>
+				<div class="card">
+					<h3>Wir wissen, was wir tun</h3>
+					<p><em>(pictures of notch, cookie banner, install prompt android, light house)</em></p>
+				</div>
+				<div class="card">
 					<h3>Durckbar - Printable</h3>
 					<p>
 						Wir achten generell drauf, dass unsere Webseiten ausgedruckt werden können, ohne viel
@@ -98,19 +104,34 @@
 						Man arbeitet am schnellsten, wenn es passt. Egal, ob Datumformat, Anführungszeichen.
 					</p>
 				</div>
+			</details>
+			<details>
+				<summary role="heading">Weil wir's können</summary>
 				<div class="card">
-					<h3>Keine Unnötige Arbeit</h3>
+					<h3>Frontend und Backend</h3>
+				</div>
+				<div class="card">
+					<h3>Server oder Serverless</h3>
+				</div>
+			</details>
+			<details>
+				<summary role="heading">Keine unnötige Arbeit</summary>
+				<div class="card">
+					<h3>Wir erfinden das Rad nicht neu, wir benutzen es.</h3>
 					<p>
 						Wir nutzen das, was uns bereits gegeben ist. So erfinden wir zum Beispiel den Dunklen
 						Modus nicht neu, sondern nutzen das was uns der Hersteller / Browser gibt und arbeiten
 						damit.
 					</p>
 				</div>
+				<div class="card">
+					<h3>Barrierefreiheit</h3>
+					<p>
+						Unsere Webseiten lassen sich auch benutzen, wenn man nur eine Tastatur zur Verfügung
+						hat. Oder einen Screenreader.
+					</p>
+				</div>
 			</details>
-		</div>
-		<div>
-			<h2>Angenehm für die Augen</h2>
-			<p>Alle unsere Projekte kommen standardmäßig im dunklen und hellen Modus.</p>
 		</div>
 		<div>
 			<h2>Mobile First</h2>
@@ -124,41 +145,8 @@
 			<p>Programmier-Paradigmen die bei uns Anwendung finden: KISS, Never repeat yourself</p>
 		</div>
 		<div>
-			<h2>Best practices</h2>
-			<p>Programmier-Paradigmen die bei uns Anwendung finden: KISS, Never repeat yourself</p>
-		</div>
-		<div>
-			<h2>Das Auge liegt im Detail</h2>
-			<em>(pictures of notch, cookie banner, install prompt android, light house)</em>
-		</div>
-		<div>
-			<h2>Sie haben nichts zu befürchten</h2>
-			<p>Wir kümmern uns um Gesetzeskonformität</p>
-		</div>
-	</div>
-	<div class="card">
-		<h1>Bisherige Projekte</h1>
-	</div>
-	<div class="card">
-		<h1>Weil wir's können.</h1>
-		<div class="half">
-			<div>
-				<h2>Serverless (Cloud)</h2>
-			</div>
-			<div>
-				<h2>Server</h2>
-			</div>
-		</div>
-		<div class="half">
-			<div>
-				<h2>Frontend</h2>
-				<p>
-					Use you're cursor, <Copyable value={"you can copy this."}>make a copy.</Copyable>
-				</p>
-			</div>
-			<div>
-				<h2>Backend</h2>
-			</div>
+			<h2>Gesetzeskonformität</h2>
+			<p>Wir haben aktuelle Gesetze im Blick, und setzen sie direkt um.</p>
 		</div>
 	</div>
 </div>
@@ -226,11 +214,6 @@
 			h1 {
 				font-size: 22.5vh;
 			}
-		}
-
-		.half {
-			display: flex;
-			gap: 1em;
 		}
 	}
 </style>
