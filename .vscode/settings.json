@@ -12,5 +12,7 @@
 	"editor.formatOnSave": true,
 	"files.insertFinalNewline": true,
 	"javascript.format.semicolons": "insert",
+	"javascript.preferences.quoteStyle": "double",
+	"typescript.preferences.quoteStyle": "double",
 	"typescript.format.semicolons": "insert"
 }
