@@ -33,6 +33,9 @@
 		<div>
 			<h2>Beratung</h2>
 			<p>Sie wissen noch nicht was sie wollen? Unsere IT-Experten können helfen!</p>
+			<p>
+				Sie können jederzeit Kontakt mit uns über unsere <a href="/about/contact">Kontakt Seite</a> aufnehmen.
+			</p>
 		</div>
 		<div>
 			<h2>Betreuung</h2>
@@ -43,11 +46,17 @@
 		</div>
 		<div>
 			<h2>Entwicklung</h2>
-			<p>Wenn wir etwas entwickeln, dann mit dem Ziel des Kundens im Kopf.</p>
+			<p>
+				Sie wissen was sie wollen, wir setzen es um! Wenn wir etwas entwickeln, dann mit dem Ziel
+				des Kundens im Kopf.
+			</p>
 		</div>
 		<div>
 			<h2>Anbindung</h2>
-			<p>An ihr bestehendes System wie SAP, Sage oder ähnliches</p>
+			<p>
+				Sie haben bereits ein bestehendes System, es ist aber etwas in die Jahre gekommen? Wir
+				können helfen in dem wir es an eine neue Oberfläche anbinden oder generalüberholen.
+			</p>
 		</div>
 	</div>
 	<div class="card">
@@ -55,14 +64,17 @@
 		<div>
 			<h2>Immer und von überall erreichbar</h2>
 			<p>
-				Egal ob unterwegs, beim Kunden, auf dem Klo: Unsere Services sind immer erreichtbar. Selbst
-				offline.
+				Egal ob unterwegs, beim Kunden oder auf dem Klo, unsere Services sind immer erreichtbar.
+				Selbst offline.
 			</p>
 		</div>
 		<div>
 			<h2>Kein Update-Albtraum</h2>
-			<p>Updates passieren einfach, im Hintergrund. Ohne Sie oder Ihre Mitarbeiter zu stören.</p>
-			<p>Keine Update-Buttons, keine veraltete Software mit Sicherheitslücken.</p>
+			<p>Updates passieren einfach im Hintergrund.</p>
+			<p>
+				Keine Update-Buttons, keine veraltete Software mit Sicherheitslücken, keine Unterbrechungen
+				beim arbeiten.
+			</p>
 		</div>
 		<div>
 			<h2>Schnelligkeit</h2>
@@ -79,11 +91,21 @@
 				<summary><h2>Auge für's Detail</h2></summary>
 				<div class="card">
 					<h3>Angenehm für die Augen</h3>
-					<p>Alle unsere Projekte kommen standardmäßig im dunklen und hellen Modus.</p>
+					<p>
+						Alle unsere Projekte kommen standardmäßig im hellen und dunklen Modus. Dies ist angenehm
+						für die Augen, kann aber zum Beispiel auch Akku sparen.
+					</p>
 				</div>
 				<div class="card">
-					<h3>Wir wissen, was wir tun</h3>
-					<p><em>(pictures of notch, cookie banner, install prompt android, light house)</em></p>
+					<h3>Erfahrung</h3>
+					<p>
+						Durch jahrelange Erfahrung wissen wir, was wir tun.
+						<em>(pictures of notch, cookie banner, install prompt android, light house)</em>
+						<img
+							src="/img/why-us/lighthouse.gif"
+							alt="Perfect Google Lighthouse (Website Speedtest) Result"
+							loading="lazy" />
+					</p>
 				</div>
 				<div class="card">
 					<h3>Durckbar - Printable</h3>
@@ -103,9 +125,22 @@
 				<summary><h2>Weil wir's können</h2></summary>
 				<div class="card">
 					<h3>Frontend und Backend</h3>
+					<p>Unsere Frontends sind Benutzer-Zentriert, einfach und schnell zu benutzen.</p>
+					<p>
+						Unser Backends sind skalierbar, einfach zu benutzen und halten sich an allgemeine
+						Web-Standards.
+					</p>
 				</div>
 				<div class="card">
 					<h3>Server oder Serverless</h3>
+					<p>
+						Sie wollen ihre Daten nicht in der Cloud, sondern lieber hier auf dem Boden? Wir kümmern
+						uns um Server und, dass alles läuft.
+					</p>
+					<p>
+						Sie erwarten eine Menge Benutzer und wollen schon jetzt in die Zukunft investieren? Wir
+						sind vertraut mit Cloud-Lösungen und können diese Problemlos ansteuern.
+					</p>
 				</div>
 			</details>
 			<details>
@@ -180,17 +215,31 @@
 	.grid {
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-		.card {
+		div.card {
+			a {
+				text-decoration: underline;
+
+				&:hover {
+					color: var(--accent);
+				}
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
 			details {
 				summary {
 					cursor: pointer;
 
 					h2 {
 						display: inline-block;
+						margin-block: 0.2em;
 					}
 				}
 
-				.card:not(:last-child) {
+				div.card:not(:last-child) {
 					margin-bottom: 0.5em;
 				}
 			}
