@@ -26,12 +26,6 @@
 	<h1>{"Faster.\nEasier.\nBetter."}</h1>
 	<h2>{msg}</h2>
 	<h3>Wir helfen!</h3>
-	<!-- <p>
-		Available languages:
-		<button type="button">🇩🇪</button>
-		<button type="button">🇬🇧</button>
-		<button type="button">🇨🇳</button>
-	</p> -->
 </div>
 <div class="grid">
 	<div class="card">
@@ -82,7 +76,7 @@
 		<h1>Warum wir?</h1>
 		<div>
 			<details>
-				<summary role="heading">Auge für's Detail</summary>
+				<summary><h2>Auge für's Detail</h2></summary>
 				<div class="card">
 					<h3>Angenehm für die Augen</h3>
 					<p>Alle unsere Projekte kommen standardmäßig im dunklen und hellen Modus.</p>
@@ -106,7 +100,7 @@
 				</div>
 			</details>
 			<details>
-				<summary role="heading">Weil wir's können</summary>
+				<summary><h2>Weil wir's können</h2></summary>
 				<div class="card">
 					<h3>Frontend und Backend</h3>
 				</div>
@@ -115,7 +109,7 @@
 				</div>
 			</details>
 			<details>
-				<summary role="heading">Keine unnötige Arbeit</summary>
+				<summary><h2>Keine unnötige Arbeit</h2></summary>
 				<div class="card">
 					<h3>Wir erfinden das Rad nicht neu, wir benutzen es.</h3>
 					<p>
@@ -188,16 +182,12 @@
 
 		.card {
 			details {
-				summary[role="heading"] {
+				summary {
 					cursor: pointer;
 
-					display: block;
-					font-size: 1.5em;
-					margin-block-start: 0.83em;
-					margin-block-end: 0.83em;
-					margin-inline-start: 0px;
-					margin-inline-end: 0px;
-					font-weight: bold;
+					h2 {
+						display: inline-block;
+					}
 				}
 
 				.card:not(:last-child) {
