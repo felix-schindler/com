@@ -41,7 +41,6 @@ a[role="button"] {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-
 	button,
 	a[role="button"] {
 		color: black;

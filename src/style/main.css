@@ -123,6 +123,10 @@ nav {
 	gap: .25em;
 }
 
+nav::-webkit-scrollbar {
+	display: none;
+}
+
 nav a {
 	padding: .4em .6em;
 	border-radius: var(--radius);
