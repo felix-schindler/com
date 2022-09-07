@@ -1,4 +1,8 @@
 <script>
+	import { page } from "$app/stores";
+
+	import Clickable from "$lib/components/Clickable.svelte";
+
 	let msgs = [
 		"Sie wollen Unternehmensprozesse optimieren?",
 		"Sie wollen ihre eigene Webseite?",
@@ -116,8 +120,76 @@
 				</div>
 				<div class="card">
 					<h3>i18n</h3>
+					<div>
+						Das Datum ist immer im richtigen Format. Die Entfernung und Temparatur ist in einer
+						Einheit, die man sich vorstellen kann. Große Zahlen sind richtig getrennt und beim
+						ersten Blick gelesen.
+					</div>
+					<div class="row">
+						<div class="card" lang="de">
+							<h4>Deutsch</h4>
+							<p>{Number(12345.67).toLocaleString("de-DE")} €</p>
+							<p>{Number(37).toLocaleString("de-DE")} °C</p>
+							<p>{Number(10).toLocaleString("de-DE")} KM</p>
+							<p>{new Date().toLocaleString("de-DE", { hourCycle: "h23" })}</p>
+							<p>
+								{new Date().toLocaleString("de-DE", {
+									hourCycle: "h23",
+									dateStyle: "medium",
+									timeStyle: "short",
+								})}
+							</p>
+							<ol>
+								<li>Erstens</li>
+								<li>Zweitens</li>
+							</ol>
+						</div>
+						<div class="card" lang="en">
+							<h4>English</h4>
+							<p>{Number(12345.67).toLocaleString("en-US")} $</p>
+							<p>{Number(98.6).toLocaleString("en-US")} °F</p>
+							<p>{Number(6.21).toLocaleString("en-US")} miles</p>
+							<p>{new Date().toLocaleString("en-US", { hourCycle: "h11" })}</p>
+							<p>
+								{new Date().toLocaleString("en-US", {
+									hourCycle: "h11",
+									dateStyle: "medium",
+									timeStyle: "short",
+								})}
+							</p>
+							<ol>
+								<li>First</li>
+								<li>Second</li>
+							</ol>
+						</div>
+						<div class="card" lang="zh-Hans">
+							<h4>中文</h4>
+							<p>{Number(12345.67).toLocaleString("zh-Hans")} ¥</p>
+							<p>{Number(37).toLocaleString("zh-Hans")} 摄氏度</p>
+							<p>{Number(10).toLocaleString("zh-Hans")} 公里</p>
+							<p>
+								{new Date().toLocaleString("zh-Hans", {
+									calendar: "chinese",
+									hourCycle: "h11",
+								})}
+							</p>
+							<p>
+								{new Date().toLocaleString("zh-Hans", {
+									calendar: "chinese",
+									hourCycle: "h11",
+									dateStyle: "medium",
+									timeStyle: "short",
+								})}
+							</p>
+							<ol>
+								<li>第一</li>
+								<li>第二</li>
+							</ol>
+						</div>
+					</div>
 					<p>
-						Man arbeitet am schnellsten, wenn es passt. Egal, ob Datumformat, Anführungszeichen.
+						Sie haben Mitarbeiter aus anderen Ländern? Kein Problem! Unsere Seiten können in allen
+						möglichen Sprachen kommen. Außerdem stimmen bei uns Dinge wie Datumsformat immer.
 					</p>
 				</div>
 			</details>
@@ -125,10 +197,10 @@
 				<summary><h2>Weil wir's können</h2></summary>
 				<div class="card">
 					<h3>Frontend und Backend</h3>
-					<p>Unsere Frontends sind Benutzer-Zentriert, einfach und schnell zu benutzen.</p>
+					<p>Unsere Frontends sind Benutzer-Zentriert, einfach und schnell.</p>
 					<p>
-						Unser Backends sind skalierbar, einfach zu benutzen und halten sich an allgemeine
-						Web-Standards.
+						Unser Backends sind skalierbar und halten sich an allgemeine Web-Standards, einfach
+						anzupassen und zu erweitern.
 					</p>
 				</div>
 				<div class="card">
@@ -146,11 +218,18 @@
 			<details>
 				<summary><h2>Keine unnötige Arbeit</h2></summary>
 				<div class="card">
-					<h3>Wir erfinden das Rad nicht neu, wir benutzen es.</h3>
+					<h3>Wir erfinden das Rad nicht neu</h3>
 					<p>
-						Wir nutzen das, was uns bereits gegeben ist. So erfinden wir zum Beispiel den Dunklen
-						Modus nicht neu, sondern nutzen das was uns der Hersteller / Browser gibt und arbeiten
-						damit.
+						Wir nutzen das, was uns Betriebssystem und Browser hergeben. Dadurch steuern wir native
+						APIs an, die dem User bereits vertraut vorkommen.
+					</p>
+					<p>
+						Beispiele: Dunkler Modus, <Clickable
+							onclick={() =>
+								navigator.share({
+									title: 'Beispiel Dialog "Teilen"',
+									text: "Hier steht ein Text",
+								})}>Share Dialog</Clickable>
 					</p>
 				</div>
 				<div class="card">
@@ -252,6 +331,23 @@
 
 			h1 {
 				font-size: 22.5vh;
+			}
+		}
+
+		.grid {
+			div.card {
+				details {
+					div.card {
+						div.row {
+							margin-block: 1em;
+
+							p {
+								margin: 0;
+								margin-block-end: 0.25em;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
