@@ -1,6 +1,4 @@
 <script>
-	import { page } from "$app/stores";
-
 	import Clickable from "$lib/components/Clickable.svelte";
 
 	let msgs = [

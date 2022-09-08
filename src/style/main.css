@@ -119,6 +119,7 @@ a:hover {
 /* Nav bar */
 nav {
 	display: flex;
+	align-items: flex-start;
 	overflow: scroll;
 	gap: .25em;
 }
