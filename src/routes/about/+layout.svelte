@@ -22,7 +22,7 @@
 		</nav>
 		<div>
 			<a href="/app/auth">Login</a>
-			<a href="/app/auth/register" role="button">Sign Up</a>
+			<a href="/app/auth/register" role="button">Registrieren</a>
 		</div>
 	</header>
 	<main>
