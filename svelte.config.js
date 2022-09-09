@@ -8,6 +8,9 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
+		version: {
+			name: "0.1.0-beta"
+		},
 		adapter: adapter()
 	}
 };
