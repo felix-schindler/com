@@ -69,7 +69,7 @@
 		}
 
 		span.green {
-			color: green;
+			color: rgb(var(--green-rgb));
 		}
 	}
 </style>
