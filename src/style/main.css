@@ -69,6 +69,7 @@ body {
 
 	word-wrap: break-word;
 	hyphens: auto;
+	-webkit-hyphens: auto;
 }
 
 .card>h1 {

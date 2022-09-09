@@ -76,8 +76,8 @@
 			margin-block-end: 1em;
 
 			a {
-				user-select: none;
 				-webkit-user-select: none;
+				user-select: none;
 
 				padding: 0.2em 0.4em;
 				border: 1px solid rgba(var(--gray-rgb), 0.8);
