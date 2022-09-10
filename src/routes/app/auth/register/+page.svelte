@@ -128,7 +128,7 @@
 					background-color: transparent;
 
 					margin-block: 0.5em;
-					border-color: var(--light-gray);
+					border-color: rgba(var(--gray-rgb), 0.8);
 					border-radius: var(--radius);
 
 					&:hover:not(:disabled) {
