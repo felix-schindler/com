@@ -1,11 +1,12 @@
 <script lang="ts">
-	import type { Quiz } from "$lib/core/types";
+	import type { Quiz, Answer } from "$lib/core/types";
 	import { tooltip } from "svooltip";
 	import "svooltip/svooltip.css";
 
 	import Spinner from "$lib/components/Spinner.svelte";
 
 	let page = 0;
+	let answers: Answer[] = [];
 
 	async function loadQuiz(page: number): Promise<Quiz | undefined> {
 		try {
@@ -16,9 +17,24 @@
 		return undefined;
 	}
 
-	function vote(answer: string) {
-		console.log(page, answer);
+	function answer(answer: Answer) {
+		answers.push(answer);
 		page++;
+	}
+
+	function evaluation(): string[] {
+		let frontend = "SvelteKit";
+		let backend = "PocketBase";
+
+		if (answers[1].index == 2) {
+			if (answers[2].index != 1) backend = "Firebase";
+			else backend = "SupaBase";
+		}
+		if (answers[0].index == 1 && answers[2].index == 3 && answers[3].index == 2) {
+			frontend = "Flutter";
+		}
+
+		return [frontend, backend];
 	}
 </script>
 
@@ -33,9 +49,12 @@
 		{:then quiz}
 			{#if quiz && quiz.answers.length > 0}
 				<div class="quiz">
-					<p class="q">{quiz.question}</p>
+					<div class="q">
+						<p>{quiz.question}</p>
+						<p>{quiz.index} von {quiz.max}</p>
+					</div>
 					{#each quiz.answers as a}
-						<button type="button" on:click={() => vote(a.answer)}>
+						<button type="button" on:click={() => answer(a)}>
 							{a.answer}
 							{#if a.hint}
 								<span
@@ -54,7 +73,13 @@
 				<p class="success">
 					Danke für das Beantworten der Fragen, wir werden uns bei Ihnen melden!
 				</p>
+				<p>
+					Basierend auf Ihren Antworten wird es vermutlich eine Lösung mit
+					{evaluation().join(" und ")}
+				</p>
 			{/if}
+		{:catch}
+			<p>Fehler beim Laden der Fragen, bitte versuchen Sie es später noch einmal.</p>
 		{/await}
 	</div>
 </div>
@@ -75,10 +100,22 @@
 			}
 
 			div.quiz {
-				p.q {
-					text-align: center;
-					font-size: 1.1em;
-					font-weight: 600;
+				div.q {
+					& > p:first-child {
+						margin-block-end: 0.1em;
+
+						text-align: center;
+						font-size: 1.1em;
+						font-weight: 600;
+					}
+
+					& > p:last-child {
+						margin-block-start: 0.1em;
+
+						color: var(--light-gray);
+						text-align: center;
+						font-size: 0.95em;
+					}
 				}
 
 				button {
