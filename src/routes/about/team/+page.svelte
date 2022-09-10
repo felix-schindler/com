@@ -23,14 +23,20 @@
 			{ href: "https://gitlab.com/felix-schindler", name: "GitLab", icon: "gitlab" },
 		]}
 		langs={[
-			{ name: "PHP" },
 			{ name: "TypeScript" },
+			{ name: "PHP" },
 			{ name: "Java" },
 			{ name: "C#" },
 			{ name: "SQL" },
 		]}
 		frameworks={[{ name: "Svelte" }, { name: "React" }, { name: "Unity" }]}
-		data={[{ name: "MySQL" }, { name: "SQLite" }, { name: "MongoDB" }, { name: "Firebase" }]}
+		data={[
+			{ name: "MySQL" },
+			{ name: "SQLite" },
+			{ name: "Oracle" },
+			{ name: "MongoDB" },
+			{ name: "Firebase" },
+		]}
 		runtimes={[{ name: "NodeJS" }, { name: "Deno" }]} />
 	<PersonCard
 		name={"Florian Schindler"}
@@ -43,10 +49,11 @@
 			{ name: "Dart" },
 			{ name: "Python" },
 			{ name: "C" },
+			{ name: "Java" },
 			{ name: "SQL" },
 		]}
 		frameworks={[{ name: "React" }, { name: "Vue" }, { name: "Flutter" }]}
-		data={[{ name: "MongoDB" }, { name: "Firebase" }]}
+		data={[{ name: "Oracle" }, { name: "MongoDB" }, { name: "Firebase" }]}
 		runtimes={[{ name: "NodeJS" }]} />
 </div>
 

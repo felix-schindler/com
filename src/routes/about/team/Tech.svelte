@@ -34,8 +34,8 @@
 			border-radius: var(--radius);
 
 			img {
-				height: 1.1em;
-				width: auto;
+				height: 18px;
+				width: 18px;
 				vertical-align: text-bottom;
 			}
 		}
