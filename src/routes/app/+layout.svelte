@@ -24,6 +24,7 @@
 		<nav>
 			{#if $authStore.model == null}
 				<a href="/app/auth" class:active={path == "/app/auth"}>Login</a>
+				<a href="/app/auth/register" class:active={path == "/app/auth/register"}>Register</a>
 			{:else}
 				<a href="/app" class:active={path == "/app"}>Start</a>
 			{/if}
