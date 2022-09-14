@@ -27,7 +27,7 @@ const quizes: Quiz[] = [
 	{
 		index: 2,
 		max: 4,
-		question: "Wie viele werden diese Seite benutzen?",
+		question: "Wie viele Benutzer erwarten Sie?",
 		answers: [
 			{
 				index: 1,
@@ -89,7 +89,6 @@ export function GET({ params }: any): Response {
 		const temp = quizes[index];
 		if (temp) return json(temp);
 	}
-
 
 	return new Response("Invalid paramter", { status: 400 });
 }

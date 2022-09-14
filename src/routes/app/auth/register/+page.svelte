@@ -26,12 +26,15 @@
 		let frontend = "SvelteKit";
 		let backend = "PocketBase";
 
+		// Fontend
+		if (answers[0].index == 1 && answers[2].index == 3 && answers[3].index == 2) {
+			frontend = "Flutter";
+		}
+
+		// Backend
 		if (answers[1].index == 2) {
 			if (answers[2].index != 1) backend = "Firebase";
 			else backend = "SupaBase";
-		}
-		if (answers[0].index == 1 && answers[2].index == 3 && answers[3].index == 2) {
-			frontend = "Flutter";
 		}
 
 		return [frontend, backend];
