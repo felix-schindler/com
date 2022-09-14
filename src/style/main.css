@@ -1,6 +1,7 @@
 @import url("./fonts/bootstrap-icons.css");
 @import url("./inputs.css");
 @import url("./buttons.css");
+@import url("./table.css");
 @import url("./i18n.css");
 
 /* Variables and settings */
@@ -150,6 +151,13 @@ nav a:hover {
 nav a:active {
 	background-color: rgba(var(--gray-rgb), .3);
 	text-decoration: none;
+}
+
+
+/* Some other tags */
+abbr {
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
 
 
