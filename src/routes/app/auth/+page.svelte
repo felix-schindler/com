@@ -66,6 +66,7 @@
 	@media (min-width: 1024px) {
 		form.card {
 			min-width: 525px;
+			max-width: 50%;
 			width: auto;
 
 			input {

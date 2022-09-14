@@ -58,7 +58,8 @@
 
 <style lang="scss">
 	form.card {
-		min-width: 50%;
+		min-width: 525px;
+		max-width: 50%;
 
 		h1 {
 			margin-bottom: 0.4em;
