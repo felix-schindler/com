@@ -58,9 +58,6 @@
 
 <style lang="scss">
 	form.card {
-		min-width: 525px;
-		max-width: 50%;
-
 		h1 {
 			margin-bottom: 0.4em;
 		}
@@ -71,6 +68,13 @@
 
 		span.green {
 			color: rgb(var(--green-rgb));
+		}
+	}
+
+	@media (min-width: 1024px) {
+		form.card {
+			min-width: 525px;
+			max-width: 50%;
 		}
 	}
 </style>
