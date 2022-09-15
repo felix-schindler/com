@@ -47,12 +47,12 @@ body {
 	margin: 0;
 }
 
-.hmf header,
-.hmf footer {
+.hmf>header,
+.hmf>footer {
 	padding: 1em;
 }
 
-.hmf main> :first-child {
+.hmf>main> :first-child {
 	margin-top: 0;
 }
 
