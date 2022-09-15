@@ -12,6 +12,7 @@
 			<a href="/about" class:active={path == "/about"}>Start</a>
 			<a href="/about/team" class:active={path == "/about/team"}>Team</a>
 			<a href="/about/contact" class:active={path == "/about/contact"}>Kontakt</a>
+			<a href="/about/ctf" class:active={path == "/about/ctf"}>CTF</a>
 			<a
 				href="https://github.com/felix-schindler/com"
 				title="Diese Seite auf GitHub"
