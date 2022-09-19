@@ -100,6 +100,7 @@
 
 				p {
 					float: left;
+					margin-block-end: 0;
 				}
 
 				@media (min-width: 1024px) {
