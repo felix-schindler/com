@@ -6,7 +6,6 @@
 	import Spinner from "$lib/components/Spinner.svelte";
 	import { page } from "$app/stores";
 
-	let allQuestions: Question[];
 	let currentQuestion: SimpleQuestion;
 
 	let lastQuestionAnswered = false;
@@ -15,8 +14,8 @@
 
 	async function loadQuestions(): Promise<void> {
 		const res = await fetch($page.url.href + "/quiz");
-		allQuestions = await res.json();
-		currentQuestion = allQuestions[0];
+
+		currentQuestion = (await res.json())[0] as unknown as Question;
 	}
 
 	loadQuestions();
