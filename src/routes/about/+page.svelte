@@ -1,21 +1,37 @@
 <script>
 	import Clickable from "$lib/components/Clickable.svelte";
 
-	let msgs = [
+	// const headings = [
+	// 	"Schneller.\nEinfacher.\nBesser.\n",
+	// 	"Faster.\nEasier.\nBetter.",
+	// 	"迅速地。\n简单的。\n更好的。\n",
+	// ];
+
+	const msgs = [
 		"Sie wollen Unternehmensprozesse optimieren?",
 		"Sie wollen ihre eigene Webseite?",
 		"Sie wollen mehr digitalisierung?",
 		"Sie wollen eine Beratung?",
 	];
 
-	let count = 0;
-	let msg = msgs[count];
+	// let countHeading = 0;
+	// let heading = headings[countHeading];
+	let countMsg = 0;
+	let msg = msgs[countMsg];
+
+	// setInterval(() => {
+	// 	if (countHeading >= headings.length) countHeading = 0;
+	// 	else {
+	// 		heading = headings[countHeading];
+	// 		countHeading++;
+	// 	}
+	// }, 2000);
 
 	setInterval(() => {
-		if (count >= msgs.length) count = 0;
+		if (countMsg >= msgs.length) countMsg = 0;
 		else {
-			msg = msgs[count];
-			count++;
+			msg = msgs[countMsg];
+			countMsg++;
 		}
 	}, 3000);
 </script>
