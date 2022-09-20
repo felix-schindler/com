@@ -76,14 +76,23 @@
 				{#if allQuestions.length == 1}
 					<h1>Willkommen!</h1>
 					<p>
-						Bevor es los geht müssen Sie <mark
-							><abbr use:tooltip={{ content: "maximal" }} title="maximal">max.</abbr> 5 Fragen</mark>
+						Bevor es los geht müssen Sie <mark>max. 5 Fragen</mark>
 						beantworten
 					</p>
-					<p>
-						Falls sie eine Antwort auf eine Frage nicht wissen, können Sie auch gerne unser <a
-							href="/about/contact">Kontakt Formular</a> benutzen.
-					</p>
+					<details>
+						<summary>Warum muss ich Fragen beantworten?</summary>
+						<em>
+							Durch Ihre Antworten können wir bereits einen ersten Eindruck über den Aufwand
+							bekommen. Außerdem bekommen Sie am Ende eine automatische Auswertung mit einer
+							Schätzung der Arbeitszeit und des Preises.
+						</em>
+					</details>
+					<details>
+						<summary>Ich möchte / kann keine Fragen beantworten</summary>
+						<em
+							>Sie können gerne unser
+							<a href="/about/contact">Kontakt Formular</a> nutzen, um mit uns in Kontakt zu treten.</em>
+					</details>
 				{:else}
 					{@const qsLeft = allQuestions.length - qCount}
 					<p>
@@ -118,8 +127,21 @@
 			}
 
 			div.quiz {
-				a {
-					color: var(--accent);
+				details {
+					em {
+						display: block;
+						text-align: start;
+						font-style: normal;
+
+						padding-left: 0.5em;
+						border-left: 3px solid rgba(var(--gray-rgb), 1);
+						margin-block-start: 0.5em;
+						margin-block-end: 1em;
+
+						a {
+							color: var(--accent);
+						}
+					}
 				}
 
 				p.q {

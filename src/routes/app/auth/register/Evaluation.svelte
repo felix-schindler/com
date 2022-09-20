@@ -204,29 +204,35 @@
 					</tr>
 				</tbody>
 			</table>
-			<p>Vorläufige Schätzung der Kosten und Zeiten, tatsächliche Werte können abweichen.</p>
+			<p class="s">
+				Vorläufige Schätzung der Kosten und Zeiten, tatsächliche Werte können abweichen.
+			</p>
 		</div>
 	{/await}
 </div>
 
 <style lang="scss">
-	.card {
+	div.card {
 		text-align: center;
+
+		p {
+			&.red {
+				color: red;
+			}
+
+			&.green {
+				color: rgb(var(--green-rgb));
+			}
+
+			&.s {
+				color: var(--light-gray);
+			}
+		}
 
 		form {
 			padding: 0.5em;
 			border-color: rgba(var(--gray-rgb), 0.8);
 			border-radius: var(--radius);
-
-			p {
-				&.red {
-					color: red;
-				}
-
-				&.green {
-					color: rgb(var(--green-rgb));
-				}
-			}
 		}
 
 		table {
