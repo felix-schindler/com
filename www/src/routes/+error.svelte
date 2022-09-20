@@ -59,7 +59,7 @@
 		{#if browser && window.history.length > 1}
 			<a href="#!" on:click|preventDefault={() => window.history.back()}>&larr; Zurück</a>
 		{/if}
-		<h1>{$page.status} <small>- {$page.error.message}</small></h1>
+		<h1>{$page.status} <small>- {$page.error?.message}</small></h1>
 		{#if votes && votes.length > 0}
 			<p>Wer soll für diesen Fehler gefeuert werden?</p>
 			<div class="btns">
