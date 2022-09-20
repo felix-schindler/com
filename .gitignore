@@ -1,8 +1,15 @@
+# OS
 .DS_Store
+
+# NPM
 node_modules
-/build
-/.svelte-kit
-/package
+
+# ENV
 .env
 .env.*
 !.env.example
+
+# SvelteKit
+www/build
+www/.svelte-kit
+www/package
