@@ -22,8 +22,10 @@
 			</a>
 		</nav>
 		<div>
-			<a href="/app/auth">Login</a>
-			<a href="/app/auth/register" role="button">Registrieren</a>
+			<a href="/about/auth" class:active={path == "/about/auth"}>Login</a>
+			<a href="/about/auth/register" role="button" class:active={path == "/about/auth/register"}>
+				Registrieren
+			</a>
 		</div>
 	</header>
 	<main>
@@ -40,15 +42,29 @@
 		flex-wrap: wrap;
 		gap: 0.5em;
 
+		nav {
+			.bi {
+				vertical-align: baseline;
+			}
+		}
+
 		div {
 			display: flex;
 			align-items: center;
 			gap: 1em;
-		}
 
-		nav {
-			.bi {
-				vertical-align: baseline;
+			a.active {
+				&:first-child {
+					color: var(--accent);
+				}
+
+				&[role="button"] {
+					color: inherit;
+					background-color: transparent;
+					border-color: var(--accent);
+
+					transition: 200ms color, 200ms background-color, 200ms border-color;
+				}
 			}
 		}
 	}
