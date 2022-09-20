@@ -27,12 +27,16 @@
 		}
 	}
 
+	/**
+	 * Update the vote count for the chosen person
+	 * @param vote Chosen vote
+	 */
 	async function updateVote(vote: Vote): Promise<void> {
 		try {
 			await pb.records.update("error_voting", vote.id, { votes: ++vote.votes });
 			voted = true;
 		} catch {
-			console.debug("Failed to load votes");
+			console.debug("Failed to update votes");
 		}
 	}
 
