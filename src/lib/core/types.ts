@@ -1,21 +1,11 @@
-export type Question = {
+import type { Record } from "pocketbase";
+
+export interface Question extends Record {
 	question: string;
 	answers: Answer[];
-};
+}
 
-export type Answer = {
-	answer: string;
-	hint?: string;
-	subQuestions?: Question[];
-};
-
-
-export type SimpleQuestion = {
-	question: string;
-	answers: SimpleAnswer[];
-};
-
-export type SimpleAnswer = {
+export interface Answer extends Record {
 	answer: string;
 	hint?: string;
 };
@@ -24,4 +14,3 @@ export type GivenAnswer = {
 	question: string;
 	answer: string;
 };
-
