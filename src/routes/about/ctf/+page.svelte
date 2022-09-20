@@ -6,8 +6,8 @@
 <div id="main">
 	<h1>CTF</h1>
 	<p>
-		Wenn Du diesen Test bestanden hast, kannst du dich mit deinem individuellen Code bei uns
-		bewerben. Natürlich kannst du die Challenge auch nur zum Spaß machen! :)
+		Wenn du diese Challenge geschafft hast, darfst du dich bei uns bewerben. Natürlich kannst du die
+		Challenge auch nur zum Spaß machen! :)
 	</p>
 
 	{#await pb.records.getFullList("ctf_challenges")}
