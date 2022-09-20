@@ -155,6 +155,10 @@ nav a:active {
 
 
 /* Some other tags */
+summary {
+	cursor: pointer;
+}
+
 abbr {
 	text-decoration: underline;
 	text-decoration-style: dotted;
