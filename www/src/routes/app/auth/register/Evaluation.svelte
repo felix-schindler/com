@@ -87,6 +87,10 @@
 					estimate.frontend = "Tauri";
 				}
 			}
+
+			if (estimate.monthlyCost == 0) {
+				estimate.monthlyCost += 2.5;
+			}
 		} else {
 			let staticSite = false;
 			let pageCount: "< 10" | "10 - 20" | "> 20";
