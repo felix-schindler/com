@@ -1,6 +1,8 @@
 <script lang="ts">
-	import type { GivenAnswer } from "$lib/core/types";
 	import { tooltip } from "svooltip";
+	import "svooltip/svooltip.css";
+
+	import type { GivenAnswer } from "$lib/core/types";
 
 	let mail: string; // mail address of registering customer
 	export let answers: GivenAnswer[]; // All answers given by the user

@@ -104,5 +104,5 @@ const questions: Question[] = [
 ];
 
 export function GET(): Response {
-	return json(questions, { headers: { "Content-Type": "application/json; charset=utf-8" } });
+	return json(questions);
 }

@@ -6,16 +6,31 @@
 	import Spinner from "$lib/components/Spinner.svelte";
 	import { page } from "$app/stores";
 
-	let currentQuestion: SimpleQuestion;
-
+	let allQuestions: any[] = [
+		{
+			question: "Was möchten Sie?",
+			answers: [
+				{
+					answer: "(Web) Anwendung",
+					hint: "Es handelt sich um ein großes Programm, z. B. Ticketsystem, Versandsystem",
+				},
+				{
+					answer: "Dynamische Webseite",
+					hint: "Inhalt ändert sich oft, z. B. Blog, Online Shop",
+				},
+				{
+					answer: "Statische Webseite",
+					hint: "Inhalt ändert sich quasi nie, z. B. Firmen Webseite",
+				},
+			],
+		},
+	];
+	let currentQuestion: any;
 	let lastQuestionAnswered = false;
-
-	let answers: GivenAnswer[] = [];
+	let answers: any[] = [];
 
 	async function loadQuestions(): Promise<void> {
-		const res = await fetch($page.url.href + "/quiz");
-
-		currentQuestion = (await res.json())[0] as unknown as Question;
+		currentQuestion = allQuestions[0];
 	}
 
 	loadQuestions();
@@ -44,7 +59,7 @@
 
 			@media (min-width: 1024px) {
 				min-width: 525px;
-				max-width: 50%;
+				max-width: 25%;
 			}
 		}
 	}

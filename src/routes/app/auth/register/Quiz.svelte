@@ -1,8 +1,10 @@
 <script lang="ts">
-	import type { GivenAnswer, SimpleAnswer, SimpleQuestion, Question } from "$lib/core/types";
+	import { tooltip } from "svooltip";
+	import "svooltip/svooltip.css";
+
+	import type { GivenAnswer, SimpleAnswer, SimpleQuestion } from "$lib/core/types";
 
 	export let currentQuestion: SimpleQuestion; // Current question
-
 	export let answers: GivenAnswer[]; // Given answers by the user
 
 	function answer(a: SimpleAnswer) {
@@ -11,6 +13,10 @@
 </script>
 
 <div class="quiz">
+	<p>
+		Bevor es los geht müssen Sie <mark
+			><abbr use:tooltip={{ content: "maximal" }} title="maximal">max.</abbr> 5 Fragen</mark> beantworten...
+	</p>
 	<p class="q">{currentQuestion.question}</p>
 	{#each currentQuestion.answers as a}
 		<button type="button" on:click={() => answer(a)}>
