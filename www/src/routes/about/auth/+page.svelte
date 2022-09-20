@@ -33,7 +33,7 @@
 		<input type="email" bind:value={mail} placeholder="E-Mail" />
 		<input type="password" bind:value={pass} placeholder="Passwort" />
 		<div class="msg-btns">
-			<a href="/app/auth/forget">Passwort vegessen</a>
+			<a href="/about/auth/forget">Passwort vegessen</a>
 			<div>
 				<button type="reset">Clear</button>
 				<button type="submit" disabled={loading || (action && success) || !mail || !pass}>

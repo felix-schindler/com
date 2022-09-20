@@ -11,7 +11,7 @@
 	let path = $page.url.pathname;
 	$: path = $page.url.pathname;
 
-	const authPath = "/app/auth";
+	const authPath = "/about/auth";
 
 	$: if (!path.startsWith(authPath) && $authStore.model == null) {
 		if (browser) goto(authPath);
@@ -23,8 +23,8 @@
 	<header>
 		<nav>
 			{#if $authStore.model == null}
-				<a href="/app/auth" class:active={path == "/app/auth"}>Login</a>
-				<a href="/app/auth/register" class:active={path == "/app/auth/register"}>Register</a>
+				<a href="/about/auth" class:active={path == "/about/auth"}>Login</a>
+				<a href="/about/auth/register" class:active={path == "/about/auth/register"}>Register</a>
 			{:else}
 				<a href="/app" class:active={path == "/app"}>Start</a>
 			{/if}
