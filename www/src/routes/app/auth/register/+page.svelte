@@ -42,6 +42,13 @@
 		allQuestions = res;
 	}
 
+	async function back() {
+		if (qCount > 0) {
+			answers.pop();
+			currentQuestion = allQuestions[--qCount];
+		}
+	}
+
 	async function answer(a: Answer): Promise<void> {
 		if (allQuestions.length == 1) {
 			let index = "1";
@@ -108,6 +115,9 @@
 						{/if}
 					</button>
 				{/each}
+				{#if qCount > 0}
+					<a class="back" href="#!" on:click|preventDefault={back}>&larr; Zurück</a>
+				{/if}
 			</div>
 		</div>
 	{/if}
@@ -169,6 +179,10 @@
 					&:active:not(:disabled) {
 						background-color: rgba(var(--gray-rgb), 0.4);
 					}
+				}
+
+				a.back {
+					font-size: 0.95em;
 				}
 			}
 		}

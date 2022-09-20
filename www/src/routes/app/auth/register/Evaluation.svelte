@@ -46,7 +46,7 @@
 			answers.map((a) => {
 				switch (a.question) {
 					case "Muss die Anwendung auch ohne Internet funktionieren?":
-						if (a.answer == "Ein kleinerer Teil muss offline funktionieren") offline = "small part";
+						if (a.answer == "Ein Teil muss offline funktionieren") offline = "small part";
 						else if (a.answer == "Die ganze Anwendung muss auch ohne Internet funktionieren")
 							offline = "completely";
 						else if (a.answer == "Die Anwendung muss nur im lokalen Netzwerk funktioneren")
@@ -63,7 +63,7 @@
 				}
 			});
 
-			estimate.time += 40;
+			estimate.time += 80;
 
 			// @ts-ignore
 			if (offline != "local") estimate.monthlyCost += 5;
@@ -193,7 +193,7 @@
 						</td>
 						<td
 							use:tooltip={{
-								content: "Enthält Domain- und Server-/ Cloud-, sowie Verwaltungs-Kosten",
+								content: "Enthält Domain-, Server- / Cloud-, sowie Verwaltungs-Kosten",
 							}}>{estimate.monthlyCost} €</td>
 					</tr>
 					<tr>
