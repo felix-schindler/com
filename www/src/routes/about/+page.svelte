@@ -1,12 +1,6 @@
 <script>
 	import Clickable from "$lib/components/Clickable.svelte";
 
-	// const headings = [
-	// 	"Schneller.\nEinfacher.\nBesser.\n",
-	// 	"Faster.\nEasier.\nBetter.",
-	// 	"迅速地。\n简单的。\n更好的。\n",
-	// ];
-
 	const msgs = [
 		"Sie wollen Unternehmensprozesse optimieren?",
 		"Sie wollen ihre eigene Webseite?",
@@ -14,18 +8,8 @@
 		"Sie wollen eine Beratung?",
 	];
 
-	// let countHeading = 0;
-	// let heading = headings[countHeading];
 	let countMsg = 0;
 	let msg = msgs[countMsg];
-
-	// setInterval(() => {
-	// 	if (countHeading >= headings.length) countHeading = 0;
-	// 	else {
-	// 		heading = headings[countHeading];
-	// 		countHeading++;
-	// 	}
-	// }, 2000);
 
 	setInterval(() => {
 		if (countMsg >= msgs.length) countMsg = 0;
@@ -65,15 +49,19 @@
 		<div>
 			<h2>Entwicklung</h2>
 			<p>
-				Sie wissen was sie wollen, wir setzen es um! Wenn wir etwas entwickeln, dann mit dem Ziel
-				des Kundens im Kopf.
+				Sie wissen was sie wollen, wir setzen es um! Wenn wir etwas entwickeln, dann mit Ihrem Ziel
+				im Kopf.
+			</p>
+			<p>
+				Klicken Sie <a href="/about/auth/register" title="Registrierung">hier</a>, um ein paar
+				Fragen zu beantworten um eine Idee über Preis und Dauer zu bekommen.
 			</p>
 		</div>
 		<div>
 			<h2>Anbindung</h2>
 			<p>
-				Sie haben bereits ein bestehendes System, es ist aber etwas in die Jahre gekommen? Wir
-				können helfen in dem wir es an eine neue Oberfläche anbinden oder generalüberholen.
+				Sie haben bereits ein bestehendes System? Wir können helfen in dem wir es an eine neue
+				Oberfläche anbinden oder generalüberholen.
 			</p>
 		</div>
 	</div>
