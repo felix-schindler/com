@@ -17,20 +17,26 @@
 			{#each ctfs as ctf}
 				<div class="card">
 					<header>
-						<h2>Current challenge: {ctf.name}</h2>
+						<div>
+							<h2>Current challenge: {ctf.name}</h2>
+							<p>Created: 📅 {new Date(ctf.created).toLocaleDateString()}</p>
+						</div>
 						<button
 							type="button"
 							on:click={() => {
 								if (confirm("Start this challenge?")) {
 									try {
-										const uid = crypto.randomUUID();
-										localStorage.setItem("ctf_uuid", uid);
+										let uid = localStorage.getItem("ctf_uuid");
+										if (!uid) {
+											uid = crypto.randomUUID();
+											localStorage.setItem("ctf_uuid", uid);
+										}
 										pb.records.create("ctf_stats", {
 											uuid: uid,
 											challenge: ctf.id,
 											start: new Date().toISOString(),
 										});
-										window.open(ctf.link + "?u=uid", "_blank");
+										window.open(`${ctf.link}?u=${uid}`, "_blank");
 									} catch {
 										alert(
 											"Failed to start challenge, make sure your browser is up-to-date and your localStorage is enabled."
@@ -75,9 +81,15 @@
 				@media (max-width: 1024px) {
 					flex-direction: column;
 					margin-bottom: 1em;
+				}
 
+				div {
 					h2 {
-						margin-bottom: 0.25em;
+						margin-block-end: 0.125em;
+					}
+
+					p {
+						margin-block-start: 0;
 					}
 				}
 
