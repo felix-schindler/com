@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from "$app/navigation";
+	import { page } from "$app/stores";
 	import Spinner from "$lib/components/Spinner.svelte";
 
 	let mail: string, pass: string;
@@ -18,6 +20,7 @@
 			if (success) {
 				mail = "";
 				pass = "";
+				goto($page.url.searchParams.get("next") ?? "/app");
 			}
 		}, 2500);
 	}
