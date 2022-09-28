@@ -11,9 +11,8 @@
 	let path = $page.url.pathname;
 	$: path = $page.url.pathname;
 
-	const authPath = "/about/auth";
-
-	$: if (!path.startsWith(authPath) && $authStore.model == null) {
+	$: if ($authStore.model == null) {
+		const authPath = "/about/auth?next=" + encodeURIComponent(path);
 		if (browser) goto(authPath);
 		else redirect(307, authPath);
 	}
