@@ -181,6 +181,17 @@ kbd {
 	background-color: rgba(var(--gray-rgb), .6);
 }
 
+em {
+	display: block;
+	text-align: start;
+	font-style: normal;
+
+	padding-left: 0.5em;
+	border-left: 3px solid rgb(var(--gray-rgb));
+	margin-block-start: 0.5em;
+	margin-block-end: 1em;
+}
+
 
 /* Special things */
 :disabled {

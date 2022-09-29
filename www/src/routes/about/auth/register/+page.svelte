@@ -137,21 +137,8 @@
 			}
 
 			div.quiz {
-				details {
-					em {
-						display: block;
-						text-align: start;
-						font-style: normal;
-
-						padding-left: 0.5em;
-						border-left: 3px solid rgba(var(--gray-rgb), 1);
-						margin-block-start: 0.5em;
-						margin-block-end: 1em;
-
-						a {
-							color: var(--accent);
-						}
-					}
+				details em a {
+					color: var(--accent);
 				}
 
 				p.q {
