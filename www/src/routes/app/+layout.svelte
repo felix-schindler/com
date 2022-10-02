@@ -1,8 +1,8 @@
 <script>
 	import { page } from "$app/stores";
-	import { browser } from "$app/environment";
-	import { goto } from "$app/navigation";
-	import { redirect } from "@sveltejs/kit";
+	// import { browser } from "$app/environment";
+	// import { goto } from "$app/navigation";
+	// import { redirect } from "@sveltejs/kit";
 
 	import { authStore } from "$lib/core/stores";
 
@@ -11,11 +11,11 @@
 	let path = $page.url.pathname;
 	$: path = $page.url.pathname;
 
-	$: if ($authStore.model == null) {
-		const authPath = "/about/auth?next=" + encodeURIComponent(path);
-		if (browser) goto(authPath);
-		else redirect(307, authPath);
-	}
+	// $: if ($authStore.model == null) {
+	// 	const authPath = "/about/auth?next=" + encodeURIComponent(path);
+	// 	if (browser) goto(authPath);
+	// 	else redirect(307, authPath);
+	// }
 </script>
 
 <div class="hmf">

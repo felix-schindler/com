@@ -1,6 +1,6 @@
 {
 	"name": "com",
-	"version": "0.1.7-beta",
+	"version": "0.1.8-beta",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"mdsvex": "^0.10.6",
 		"pocketbase": "^0.7.0",
 		"sass": "^1.54.5",
 		"svelte-local-storage-store": "^0.3.1"

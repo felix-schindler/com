@@ -1,9 +1,0 @@
-{
-	"deno.enable": true,
-	"editor.defaultFormatter": "denoland.vscode-deno",
-	"editor.useTabStops": true,
-	"editor.tabSize": 2,
-	"editor.comments.insertSpace": true,
-	"editor.formatOnSave": true,
-	"files.insertFinalNewline": true
-}
