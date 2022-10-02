@@ -10,6 +10,6 @@ node_modules
 !.env.example
 
 # SvelteKit
-www/build
-www/.svelte-kit
-www/package
+build
+.svelte-kit
+package
