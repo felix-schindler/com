@@ -57,7 +57,7 @@
 	form.card {
 		display: flex;
 		flex-direction: column;
-		width: 80%;
+		width: 100%;
 
 		text-align: center;
 
