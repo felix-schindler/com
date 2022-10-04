@@ -192,6 +192,27 @@ em {
 	margin-block-end: 1em;
 }
 
+/* Clickable */
+.clickable {
+	cursor: pointer;
+
+	padding: 3.2px 6.4px;
+	border-radius: var(--radius);
+}
+
+.clickable:hover:not(:disabled) {
+	background-color: rgba(var(--gray-rgb), 0.4);
+}
+
+.clickable:active:not(:disabled) {
+	background-color: rgba(var(--gray-rgb), 0.6);
+}
+
+.clickable:disabled {
+	background-color: rgba(var(--gray-rgb), 0.3);
+}
+
+
 
 /* Special things */
 :disabled {
