@@ -12,19 +12,20 @@ everything is happening.
 ```text
 📂 src
 ┗ 📂 routes
-  ┣ 📂 about - Access for Everyone
-  ┃ ┣ 📂 auth
-  ┃ ┃ ┣ 📂 forget - Forgot password
-  ┃ ┃ ┣ 📂 register - Quiz for new customers
-  ┃ ┃ ┗ 📜 +page.svelte - Login form
+  ┣ 📂 about - Pages with access for everyone
+  ┃ ┣ 📂 auth - Login form
+  ┃ ┃ ┣ 📂 forget - Forgot password form
+  ┃ ┃ ┗ 📂 register - Quiz for new customers
   ┃ ┣ 📂 contact - Contact form
   ┃ ┣ 📂 ctf - Current CTF page
-  ┃ ┣ 📂 imprint
+  ┃ ┣ 📂 imprint - Impressum nach `§5 TMG`
   ┃ ┣ 📂 privacy - Privacy policy (always has to be up-to-date!)
-  ┃ ┗ 📂 team - Team showcase
+  ┃ ┣ 📂 team - Team showcase
+  ┃ ┗ 📜 +page - General home page
   ┗ 📂 app - Access for authenticated users only
     ┣ 📂 docs - Access for Admins only; All pages are written in Markdown
-    ┗ 📂 dash - Dashboard for customers
+    ┣ 📂 dash - Either customer or admin dashboard
+    ┗ 📜 +page - Redirect to `/app/dash`
 ```
 
 ## Backend
