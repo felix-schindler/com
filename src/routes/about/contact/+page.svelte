@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { pb } from "$lib/core/stores";
 	import Spinner from "$lib/components/Spinner.svelte";
 
 	let email = "",
@@ -15,6 +14,7 @@
 			success = false;
 		} else {
 			try {
+				const { pb } = await import("$lib/core/stores");
 				await pb.records.create("contact", { email, message });
 				success = true;
 				email = "";
@@ -53,11 +53,44 @@
 				</button>
 			</span>
 		</div>
+		<hr />
+		<div class="links">
+			<a
+				href="https://api.whatsapp.com/send?phone=+4915739061903&text=Hi!"
+				target="_blank"
+				rel="nofollow noreferrer"
+				class="clickable whatsapp">
+				<i class="bi bi-whatsapp" />
+			</a>
+			<a
+				href="https://instagram.com/YourCompany"
+				target="_blank"
+				rel="nofollow noreferrer"
+				class="clickable instagram">
+				<i class="bi bi-instagram" />
+			</a>
+			<a
+				href="https://t.me/YourCompany"
+				target="_blank"
+				rel="nofollow noreferrer"
+				class="clickable telegram">
+				<i class="bi bi-telegram" />
+			</a>
+			<a
+				href="https://twitter.com/YourCompany"
+				target="_blank"
+				rel="nofollow noreferrer"
+				class="clickable twitter">
+				<i class="bi bi-twitter" />
+			</a>
+		</div>
 	</form>
 </div>
 
 <style lang="scss">
 	form.card {
+		padding-bottom: 0.5em;
+
 		h1 {
 			margin-bottom: 0.4em;
 		}
@@ -68,6 +101,48 @@
 
 		span.green {
 			color: rgb(var(--green-rgb));
+		}
+
+		.links {
+			display: flex;
+			justify-content: center;
+			gap: 0.25em;
+			flex-wrap: wrap;
+
+			margin-block-start: 0.5em;
+
+			.clickable {
+				padding: 0.4em;
+
+				transition: all 200ms;
+
+				&:hover {
+					&.whatsapp {
+						color: #25d366;
+					}
+
+					&.instagram {
+						color: white;
+						background-image: radial-gradient(
+								circle farthest-corner at 32% 106%,
+								rgb(255, 225, 125) 0%,
+								rgb(255, 205, 105) 10%,
+								rgb(250, 145, 55) 28%,
+								rgb(235, 65, 65) 42%,
+								transparent 82%
+							),
+							linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+					}
+
+					&.telegram {
+						color: #0088cc;
+					}
+
+					&.twitter {
+						color: #1da1f2;
+					}
+				}
+			}
 		}
 	}
 
