@@ -336,20 +336,12 @@
 			}
 		}
 
-		.grid {
-			div.card {
-				details {
-					div.card {
-						div.row {
-							margin-block: 1em;
+		div.row {
+			margin-block: 1em;
 
-							p {
-								margin: 0;
-								margin-block-end: 0.25em;
-							}
-						}
-					}
-				}
+			p {
+				margin: 0;
+				margin-block-end: 0.25em;
 			}
 		}
 	}
