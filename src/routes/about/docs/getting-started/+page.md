@@ -1,4 +1,4 @@
-[&larr; Back](/app/docs)
+[&larr; Back](/about/docs)
 
 # Getting started
 
@@ -21,11 +21,11 @@ everything is happening.
   ┃ ┣ 📂 imprint - Impressum nach `§5 TMG`
   ┃ ┣ 📂 privacy - Privacy policy (always has to be up-to-date!)
   ┃ ┣ 📂 team - Team showcase
+  ┃ ┣ 📂 docs - Access for Admins only; All pages are written in Markdown
   ┃ ┗ 📜 +page - General home page
   ┗ 📂 app - Access for authenticated users only
-    ┣ 📂 docs - Access for Admins only; All pages are written in Markdown
-    ┣ 📂 dash - Either customer or admin dashboard
-    ┗ 📜 +page - Redirect to `/app/dash`
+    ┣ 📂 status - Status page for the products of the customer
+    ┗ 📜 +page - Customer Dashboard
 ```
 
 ## Backend
