@@ -4,6 +4,9 @@
 
 	let path = $page.url.pathname;
 	$: path = $page.url.pathname;
+
+	let showMore = false;
+	$: showMore = path.startsWith("/about/docs") || path == "/about/ctf";
 </script>
 
 <div class="hmf">
@@ -12,7 +15,17 @@
 			<a href="/about" class:active={path == "/about"}>Start</a>
 			<a href="/about/team" class:active={path == "/about/team"}>Team</a>
 			<a href="/about/contact" class:active={path == "/about/contact"}>Kontakt</a>
-			<a href="/about/ctf" class:active={path == "/about/ctf"}>CTF</a>
+			<div
+				on:mouseenter={() => (showMore = true)}
+				on:mouseleave={() => {
+					showMore = path.startsWith("/about/docs") || path == "/about/ctf";
+				}}>
+				<a href="#!" class="more">More</a>
+				{#if showMore}
+					<a href="/about/ctf" class:active={path == "/about/ctf"}>CTF</a>
+					<a href="/about/docs" class:active={path.startsWith("/about/docs")}>Docs</a>
+				{/if}
+			</div>
 			<a
 				href="https://github.com/felix-schindler/com"
 				title="Diese Seite auf GitHub"
@@ -21,7 +34,7 @@
 				<i class="bi bi-github" />
 			</a>
 		</nav>
-		<div>
+		<div class="auth">
 			<a href="/about/auth" class:active={path == "/about/auth"}>Login</a>
 			<a href="/about/auth/register" role="button" class:active={path == "/about/auth/register"}>
 				Registrieren
@@ -46,9 +59,19 @@
 			.bi {
 				vertical-align: baseline;
 			}
+
+			div {
+				a.more {
+					cursor: default;
+					background-color: transparent;
+				}
+
+				display: flex;
+				align-items: center;
+			}
 		}
 
-		div {
+		div.auth {
 			display: flex;
 			align-items: center;
 			gap: 1em;
