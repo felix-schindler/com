@@ -5,7 +5,7 @@
 
 	import { authStore } from "$lib/core/stores";
 
-	if ($authStore.model !== null) {
+	if ($authStore != null) {
 		const redir = "/app";
 		if (browser) goto(redir);
 		else redirect(307, redir);

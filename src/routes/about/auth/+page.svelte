@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 	import { page } from "$app/stores";
+
+	import { authStore } from "$lib/core/stores";
+
 	import Spinner from "$lib/components/Spinner.svelte";
 
 	let mail: string, pass: string;
@@ -9,20 +12,31 @@
 	/**
 	 * Doesn't return anything but set's `success` and `action`
 	 */
-	function login(): void {
-		loading = true;
+	async function login(): Promise<void> {
+		action = true;
+		success = false;
 
-		setTimeout(() => {
-			action = true;
-			loading = false;
-			success = false;
+		const { pb } = await import("$lib/core/stores");
 
-			if (success) {
-				mail = "";
-				pass = "";
-				goto($page.url.searchParams.get("next") ?? "/app");
+		try {
+			$authStore = (await pb.users.authViaEmail(mail, pass)).user;
+			success = true;
+		} catch {
+			try {
+				$authStore = (await pb.admins.authViaEmail(mail, pass)).admin;
+				success = true;
+			} catch (e) {
+				console.error(e);
 			}
-		}, 2500);
+		} finally {
+			loading = false;
+		}
+
+		if (success) {
+			mail = "";
+			pass = "";
+			goto($page.url.searchParams.get("next") ?? "/app");
+		}
 	}
 </script>
 

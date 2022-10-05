@@ -4,35 +4,34 @@
 	import { goto } from "$app/navigation";
 	import { redirect } from "@sveltejs/kit";
 
-	// import { authStore } from "$lib/core/stores";
+	import { authStore } from "$lib/core/stores";
 
 	import Footer from "$lib/components/Footer.svelte";
 
-	const isAdmin = true;
+	// #region redirects
 
 	let path = $page.url.pathname;
 	$: path = $page.url.pathname;
 
 	if (path == "/app") {
-		const dashPath = "/app/dash";
+		const dashPath = "/app";
 		if (browser) goto(dashPath);
 		else redirect(307, dashPath);
 	}
 
-	// $: if ($authStore.model == null) {
-	// 	const authPath = "/about/auth?next=" + encodeURIComponent(path);
-	// 	if (browser) goto(authPath);
-	// 	else redirect(307, authPath);
-	// }
+	$: if ($authStore == null) {
+		const authPath = "/about/auth?next=" + encodeURIComponent(path);
+		if (browser) goto(authPath);
+		else redirect(307, authPath);
+	}
+
+	//#endregion redirects
 </script>
 
 <div class="hmf">
 	<header>
 		<nav>
-			<a href="/app/dash" class:active={path == "/app/dash"}>Dashboard</a>
-			{#if isAdmin}
-				<a href="/app/docs" class:active={path.startsWith("/app/docs")}>Docs</a>
-			{/if}
+			<a href="/app" class:active={path == "/app"}>Dashboard</a>
 		</nav>
 		<a class="inverse" href="/about/auth/logout" role="button">
 			<i class="bi bi-door-open" />
