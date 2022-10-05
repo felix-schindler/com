@@ -6,10 +6,10 @@
 
 	try {
 		pb.authStore.clear();
-		authStore.set({ model: null });
+		authStore.set(null);
 	} catch {}
 
-	if ($authStore.model === null) {
+	if ($authStore == null) {
 		const aboutPath = "/about";
 		if (browser) goto(aboutPath);
 		else redirect(307, aboutPath);
