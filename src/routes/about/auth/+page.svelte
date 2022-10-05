@@ -61,7 +61,7 @@
 				</button>
 			</div>
 		</div>
-		{#if action && !success}
+		{#if action && !loading && !success}
 			<p>Failed to log in.</p>
 		{/if}
 	</form>
