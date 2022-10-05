@@ -1,1 +1,1 @@
-Visit our [docs](https://com.schindlerfelix.de/app/docs)
+Visit our [docs](https://com.schindlerfelix.de/about/docs)
