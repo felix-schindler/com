@@ -20,19 +20,20 @@
 				on:mouseleave={() => {
 					showMore = path.startsWith("/about/docs") || path == "/about/ctf";
 				}}>
-				<a href="#!" class="more">More</a>
 				{#if showMore}
 					<a href="/about/ctf" class:active={path == "/about/ctf"}>CTF</a>
 					<a href="/about/docs" class:active={path.startsWith("/about/docs")}>Docs</a>
+					<a
+						href="https://github.com/felix-schindler/com"
+						title="Diese Seite auf GitHub"
+						target="_blank"
+						rel="nofollow noreferrer">
+						<i class="bi bi-github" />
+					</a>
+				{:else}
+					<a href="#!">More</a>
 				{/if}
 			</div>
-			<a
-				href="https://github.com/felix-schindler/com"
-				title="Diese Seite auf GitHub"
-				target="_blank"
-				rel="nofollow noreferrer">
-				<i class="bi bi-github" />
-			</a>
 		</nav>
 		<div class="auth">
 			<a href="/about/auth" class:active={path == "/about/auth"}>Login</a>
@@ -61,11 +62,6 @@
 			}
 
 			div {
-				a.more {
-					cursor: default;
-					background-color: transparent;
-				}
-
 				display: flex;
 				align-items: center;
 			}
