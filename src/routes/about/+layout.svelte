@@ -57,13 +57,9 @@
 		gap: 0.5em;
 
 		nav {
-			.bi {
-				vertical-align: baseline;
-			}
-
 			div {
 				display: flex;
-				align-items: center;
+				align-items: top;
 			}
 		}
 

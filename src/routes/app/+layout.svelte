@@ -46,16 +46,21 @@
 </div>
 
 <style lang="scss">
-	div.hmf {
-		header {
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
-			gap: 1em;
-		}
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
 
-		main {
-			padding: 0 1em;
+	main {
+		width: 95%;
+		height: 100%;
+		margin: 0 auto;
+
+		@media (min-width: 1024px) {
+			width: 97.5%;
 		}
 	}
 </style>
