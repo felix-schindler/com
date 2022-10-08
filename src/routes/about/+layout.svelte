@@ -1,4 +1,5 @@
 <script>
+	import { fly } from "svelte/transition";
 	import { page } from "$app/stores";
 	import Footer from "$lib/components/Footer.svelte";
 
@@ -21,17 +22,19 @@
 					showMore = path.startsWith("/about/docs") || path == "/about/ctf";
 				}}>
 				{#if showMore}
-					<a href="/about/ctf" class:active={path == "/about/ctf"}>CTF</a>
-					<a href="/about/docs" class:active={path.startsWith("/about/docs")}>Docs</a>
-					<a
-						href="https://github.com/felix-schindler/com"
-						title="Diese Seite auf GitHub"
-						target="_blank"
-						rel="nofollow noreferrer">
-						<i class="bi bi-github" />
-					</a>
+					<span in:fly={{ y: -20 }}>
+						<a href="/about/ctf" class:active={path == "/about/ctf"}>CTF</a>
+						<a href="/about/docs" class:active={path.startsWith("/about/docs")}>Docs</a>
+						<a
+							href="https://github.com/felix-schindler/com"
+							title="Diese Seite auf GitHub"
+							target="_blank"
+							rel="nofollow noreferrer">
+							<i class="bi bi-github" />
+						</a>
+					</span>
 				{:else}
-					<a href="#!">More</a>
+					<a href="#!" in:fly={{ y: -20 }}>More</a>
 				{/if}
 			</div>
 		</nav>
@@ -57,7 +60,8 @@
 		gap: 0.5em;
 
 		nav {
-			div {
+			div,
+			div > span {
 				display: flex;
 				align-items: top;
 			}
