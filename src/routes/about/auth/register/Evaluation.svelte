@@ -89,7 +89,7 @@
 			}
 
 			if (estimate.monthlyCost == 0) {
-				estimate.monthlyCost += 2.5;
+				estimate.monthlyCost = 2.5;
 			}
 		} else {
 			let staticSite = false;
@@ -179,7 +179,7 @@
 					<tr>
 						<td>Tatsächliche Zeit</td>
 						<!-- Same as / 8 (Stunden am Tag) / 2 (Arbeiter) -->
-						<td>{(estimate.time * 0.125 * 0.5).toLocaleString()} Tage</td>
+						<td>{(estimate.time * 0.125 * 0.5).toLocaleString()} Arbeitstage</td>
 					</tr>
 					<tr>
 						<td>Festkosten</td>

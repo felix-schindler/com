@@ -35,8 +35,8 @@ Unattached from that repo, there is our
 working for us, you can go over there and log in with your admin account, with
 which you already logged in to on this website.
 
-If there's anything that can't be done in the PocketBase Backend, it's done in
-the SvelteKit app.
+If there's anything that can't be done in the PocketBase Backend, it's done
+within the SvelteKit app.
 
 ## Deployment
 
