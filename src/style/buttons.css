@@ -1,4 +1,5 @@
 button,
+input[type="submit"],
 a[role="button"] {
 	cursor: pointer;
 	-webkit-user-select: none;
@@ -19,24 +20,28 @@ a[role="button"] {
 }
 
 button.inverse,
+input[type="submit"].inverse,
 a[role="button"].inverse {
 	color: inherit;
 	background-color: transparent;
 }
 
 button.inverse:hover:not(:disabled),
+input[type="submit"].inverse:hover:not(:disabled),
 a[role="button"].inverse:hover:not(:disabled) {
 	color: white;
 	background-color: black;
 }
 
 button:hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled),
 a[role="button"]:hover:not(:disabled) {
 	color: black;
 	background-color: transparent;
 }
 
 button:disabled,
+input[type="submit"]:disabled,
 a[role="button"]:disabled {
 	cursor: not-allowed;
 	border-color: rgb(var(--gray-rgb));
@@ -56,6 +61,7 @@ a[role="button"] {
 @media screen and (prefers-color-scheme: dark) {
 
 	button,
+	input[type="submit"],
 	a[role="button"] {
 		color: black;
 		background-color: white;
@@ -63,12 +69,14 @@ a[role="button"] {
 	}
 
 	button:hover:not(:disabled),
+	input[type="submit"]:hover:not(:disabled),
 	a[role="button"]:hover:not(:disabled) {
 		color: white;
 	}
 
 
 	button.inverse:hover:not(:disabled),
+	input[type="submit"].inverse:hover:not(:disabled),
 	a[role="button"].inverse:hover:not(:disabled) {
 		color: black;
 		background-color: white;
