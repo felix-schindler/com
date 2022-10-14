@@ -34,7 +34,7 @@
 						</a>
 					</span>
 				{:else}
-					<a href="#!" in:fly={{ y: -20 }}>More</a>
+					<a href="#!" in:fly={{ y: 20 }}>More</a>
 				{/if}
 			</div>
 		</nav>

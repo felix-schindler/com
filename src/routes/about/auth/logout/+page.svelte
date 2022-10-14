@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
 	import { goto } from "$app/navigation";
-	import { authStore, pb } from "$lib/core/stores";
 	import { redirect } from "@sveltejs/kit";
+	import { pb, authStore } from "$lib/core/stores";
 
 	try {
 		pb.authStore.clear();

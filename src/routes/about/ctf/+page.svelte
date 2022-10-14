@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Spinner from "$lib/components/Spinner.svelte";
 	import { pb } from "$lib/core/stores";
+	import Spinner from "$lib/components/Spinner.svelte";
 </script>
 
 <div id="main">
