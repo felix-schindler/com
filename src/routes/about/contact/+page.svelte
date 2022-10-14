@@ -132,6 +132,7 @@
 								transparent 82%
 							),
 							linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+						transition: none;
 					}
 
 					&.telegram {
