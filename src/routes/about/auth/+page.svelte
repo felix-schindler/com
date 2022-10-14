@@ -13,6 +13,7 @@
 	 * Doesn't return anything but set's `success` and `action`
 	 */
 	async function login(): Promise<void> {
+		loading = true;
 		action = true;
 		success = false;
 
