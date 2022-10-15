@@ -17,7 +17,7 @@ const config = {
 
 	kit: {
 		version: {
-			name: "0.2.4-beta"
+			name: "0.2.5-beta"
 		},
 		adapter: adapter()
 	}
