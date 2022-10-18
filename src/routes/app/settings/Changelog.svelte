@@ -1,7 +1,7 @@
 <script lang="ts">
 	let dialog: HTMLDialogElement;
 
-	let version = "0.2.5-beta";
+	let version = "0.2.6-beta";
 
 	function close() {
 		dialog.close();
