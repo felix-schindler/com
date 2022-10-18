@@ -164,14 +164,6 @@ abbr {
 	text-decoration-style: dotted;
 }
 
-code {
-	color: var(--accent);
-	background-color: rgba(var(--gray-rgb), .4);
-	font-size: 1.05em;
-	padding: .05em .2em;
-	border-radius: calc(var(--radius) * 0.5);
-}
-
 mark {
 	font-size: .9em;
 	padding: .05em .2em;
