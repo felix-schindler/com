@@ -7,6 +7,26 @@ We work together on GitHub. The
 central starting point for developing. In there is a single SvelteKit app, where
 everything is happening.
 
+## Set up
+
+You'll need the following (or equal) applications:
+
+- [VSCode](https://code.visualstudio.com)
+- [NodeJS, NPM](https://nodejs.org)
+- [Git](https://desktop.github.com)
+- [Browser](https://www.mozilla.org/firefox/developer/)
+
+Clone the Git repository to your local machine. After that, install the
+dependencies and run the website locally.
+
+```bash
+git clone git@github.com:felix-schindler/com.git && cd com
+
+npm ci && npm run dev
+```
+
+After that, you can open the [website on your machine](http://localhost:5173).
+
 ## Frontend
 
 ```text
@@ -15,13 +35,14 @@ everything is happening.
   ┣ 📂 about - Pages with access for everyone
   ┃ ┣ 📂 auth - Login form
   ┃ ┃ ┣ 📂 forget - Forgot password form
+  ┃ ┃ ┣ 📂 logout - Logging out the authenticated user
   ┃ ┃ ┗ 📂 register - Quiz for new customers
   ┃ ┣ 📂 contact - Contact form
   ┃ ┣ 📂 ctf - Current CTF page
-  ┃ ┣ 📂 imprint - Impressum nach `§5 TMG`
+  ┃ ┣ 📂 docs - These docs ; All pages are written in Markdown
+  ┃ ┣ 📂 imprint - Impressum nach `§5 TMG` (german law)
   ┃ ┣ 📂 privacy - Privacy policy (always has to be up-to-date!)
   ┃ ┣ 📂 team - Team showcase
-  ┃ ┣ 📂 docs - Access for Admins only; All pages are written in Markdown
   ┃ ┗ 📜 +page - General home page
   ┗ 📂 app - Access for authenticated users only
     ┣ 📂 status - Status page for the products of the customer
@@ -30,13 +51,13 @@ everything is happening.
 
 ## Backend
 
-Unattached from that repo, there is our
-[PocketBase Backend](https://pb.schindlerfelix.de/_/). Since you seem to be
-working for us, you can go over there and log in with your admin account, with
-which you already logged in to on this website.
+Unattached from this repo, there is our
+[PocketBase Backend](https://pb.schindlerfelix.de/_/). If there's anything that
+can't be done in the PocketBase Backend, it [is / will be] done within the
+SvelteKit app.
 
-If there's anything that can't be done in the PocketBase Backend, it's done
-within the SvelteKit app.
+If you are working for us you can go over there and log in with your admin
+account.
 
 ## Deployment
 

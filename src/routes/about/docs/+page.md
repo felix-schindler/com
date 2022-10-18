@@ -1,7 +1,7 @@
-# Docs
+# Documentation
 
 Well documented for an easier start.
 
-# Links
+## Development
 
 - [Getting Started](./docs/getting-started)
