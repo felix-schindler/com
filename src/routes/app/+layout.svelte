@@ -33,6 +33,7 @@
 		<nav>
 			<a href="/app" class:active={path == "/app"}>Dashboard</a>
 			<a href="/app/status" class:active={path == "/app/status"}>System Status</a>
+			<a href="/app/settings" class:active={path == "/app/settings"}>Settings</a>
 		</nav>
 		<a class="inverse" href="/about/auth/logout" role="button">
 			<i class="bi bi-door-open" />
