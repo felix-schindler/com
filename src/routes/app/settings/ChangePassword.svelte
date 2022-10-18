@@ -5,14 +5,14 @@
 </script>
 
 <button type="button" on:click={() => dialog.showModal()}>
-	<i class="bi bi-lock" /> Change Password
+	<i class="bi bi-lock" /> Passwort ändern
 </button>
 <dialog bind:this={dialog}>
 	<button class="close" type="button" on:click={() => dialog.close()}>❌</button>
 
 	<form on:submit|preventDefault={() => {}}>
-		<input type="password" bind:value={pass} placeholder="New Password" disabled />
-		<button type="submit" disabled>Change Password</button>
+		<input type="password" bind:value={pass} placeholder="Neues Passwort" disabled />
+		<button type="submit" disabled>Passwort ändern</button>
 	</form>
 </dialog>
 

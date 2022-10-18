@@ -6,14 +6,14 @@
 </script>
 
 <button type="button" on:click={() => dialog.showModal()}>
-	<i class="bi bi-envelope" /> Change e-Mail
+	<i class="bi bi-envelope" /> E-Mail ändern
 </button>
 <dialog bind:this={dialog}>
 	<button class="close" type="button" on:click={() => dialog.close()}>❌</button>
 
 	<form on:submit|preventDefault={() => {}}>
-		<input type="email" bind:value={mail} placeholder="New e-Mail" disabled />
-		<button type="submit" disabled>Change e-Mail</button>
+		<input type="email" bind:value={mail} placeholder="Neue e-Mail" disabled />
+		<button type="submit" disabled>E-Mail ändern</button>
 	</form>
 </dialog>
 

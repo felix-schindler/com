@@ -1,6 +1,6 @@
-# Documentation
+# Dokumentation
 
-Well documented for an easier start.
+Gut dokumentiert für einen einfacheren Start.
 
 ## Development
 

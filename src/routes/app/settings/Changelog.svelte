@@ -9,7 +9,7 @@
 </script>
 
 <button class="inverse" type="button" on:click={() => dialog.showModal()}>
-	<i class="bi bi-list-nested" /> Open Changelog
+	<i class="bi bi-list-nested" /> Changelog öffnen
 </button>
 <dialog bind:this={dialog}>
 	<header>
@@ -54,6 +54,11 @@
 	dialog {
 		width: 100%;
 		border-radius: var(--radius);
+
+		@media (min-width: 1024px) {
+			min-width: 525px;
+			max-width: 25%;
+		}
 
 		header {
 			button.close {
@@ -103,11 +108,6 @@
 			button {
 				font-size: 1.025em;
 			}
-		}
-
-		@media (min-width: 1024px) {
-			min-width: 525px;
-			max-width: 25%;
 		}
 	}
 </style>
