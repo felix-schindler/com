@@ -63,7 +63,7 @@
 			div,
 			div > span {
 				display: flex;
-				align-items: top;
+				align-items: flex-start;
 			}
 		}
 
