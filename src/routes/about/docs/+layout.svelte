@@ -1,6 +1,7 @@
 <script>
 	// Import GitHub markdown style
 	import "./markdown.css";
+	import "./prism-nord.css";
 </script>
 
 <div class="markdown-body">
