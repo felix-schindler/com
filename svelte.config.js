@@ -9,7 +9,7 @@ const config = {
 	preprocess: [
 		preprocess(),
 		mdsvex({
-			extensions: [".md"]
+			extensions: [".md"],
 		})
 	],
 
@@ -17,7 +17,7 @@ const config = {
 
 	kit: {
 		version: {
-			name: "0.2.6-beta"
+			name: "0.2.7-beta"
 		},
 		adapter: adapter()
 	}
