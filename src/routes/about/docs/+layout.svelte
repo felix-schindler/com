@@ -4,9 +4,9 @@
 	import "./prism-nord.css";
 </script>
 
-<div class="markdown-body">
+<article class="markdown-body">
 	<slot />
-</div>
+</article>
 
 <style lang="scss">
 	.markdown-body {

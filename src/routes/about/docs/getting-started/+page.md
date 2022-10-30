@@ -20,7 +20,8 @@ Clone the Git repository to your local machine. After that, install the
 dependencies and run the website locally.
 
 ```bash
-git clone git@github.com:felix-schindler/com.git && cd com
+git clone git@github.com:felix-schindler/com.git
+cd com
 
 npm ci && npm run dev
 ```
@@ -29,25 +30,21 @@ After that, you can open the [website on your machine](http://localhost:5173).
 
 ## Frontend
 
-```text
-📂 src
-┗ 📂 routes
-  ┣ 📂 about - Pages with access for everyone
-  ┃ ┣ 📂 auth - Login form
-  ┃ ┃ ┣ 📂 forget - Forgot password form
-  ┃ ┃ ┣ 📂 logout - Logging out the authenticated user
-  ┃ ┃ ┗ 📂 register - Quiz for new customers
-  ┃ ┣ 📂 contact - Contact form
-  ┃ ┣ 📂 ctf - Current CTF page
-  ┃ ┣ 📂 docs - These docs ; All pages are written in Markdown
-  ┃ ┣ 📂 imprint - Impressum nach `§5 TMG` (german law)
-  ┃ ┣ 📂 privacy - Privacy policy (always has to be up-to-date!)
-  ┃ ┣ 📂 team - Team showcase
-  ┃ ┗ 📜 +page - General home page
-  ┗ 📂 app - Access for authenticated users only
-    ┣ 📂 status - Status page for the products of the customer
-    ┗ 📜 +page - Customer Dashboard
-```
+- 📂 `/about` - Pages with access for everyone
+  - 📂 `/auth` - Login form
+    - 📂 `/forget` - Forgot password form
+    - 📂 `/logout` - Logging out the authenticated user
+    - 📂 `/register` - Quiz for new customers
+  - 📂 `/contact` - Contact form
+  - 📂 `/ctf` - Current CTF page
+  - 📂 `/docs` - These docs ; All pages are written in Markdown
+  - 📂 `/imprint` - Impressum nach §5 TMG (german law)
+  - 📂 `/privacy` - Privacy policy (always has to be up-to-date!)
+  - 📂 `/team` - Team showcase
+  - 📜 `/+page` - General home page
+- 📂 `/app` - Access for authenticated users only
+  - 📂 `/status` - Status page for the products of the customer
+  - 📜 `/+page` - Customer Dashboard
 
 ## Backend
 
