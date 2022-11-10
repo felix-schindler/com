@@ -1,9 +1,9 @@
 <footer>
 	<div>
 		<span>&copy; 2022 &middot; <a href="https://schindlerfelix.de">Felix Schindler</a></span>
-		<span>Made in <mark>THE LÄND</mark></span>
 	</div>
 	<div>
+		<span>Made in <mark>THE LÄND</mark></span>
 		<a href="/about/imprint">Impressum</a>
 		<a href="/about/privacy">Datenschutzinformation</a>
 	</div>

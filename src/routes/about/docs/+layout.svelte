@@ -10,8 +10,6 @@
 
 <style lang="scss">
 	.markdown-body {
-		// --color-canvas-default: transparent;
-
 		border-radius: var(--radius);
 
 		box-sizing: border-box;
