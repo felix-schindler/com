@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Clickable from "./Clickable.svelte";
-
 	export let value: string;
 
 	function copy() {
@@ -8,9 +6,9 @@
 	}
 </script>
 
-<Clickable onclick={copy}>
+<span class="clickable" on:keypress={copy} on:click={copy}>
 	<slot />
-</Clickable>
+</span>
 
 <style>
 	:global(.clickable) {
