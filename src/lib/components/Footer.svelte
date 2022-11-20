@@ -1,9 +1,7 @@
 <footer>
+	<p>&copy; 2022 &middot; <a href="https://schindlerfelix.de">Felix Schindler</a></p>
+	<p>Made in <mark>THE LÄND</mark></p>
 	<div>
-		<span>&copy; 2022 &middot; <a href="https://schindlerfelix.de">Felix Schindler</a></span>
-	</div>
-	<div>
-		<span>Made in <mark>THE LÄND</mark></span>
 		<a href="/about/imprint">Impressum</a>
 		<a href="/about/privacy">Datenschutzinformation</a>
 	</div>
@@ -22,10 +20,13 @@
 			gap: 1em;
 		}
 
+		p {
+			margin: 0;
+		}
+
 		mark {
 			color: black;
 			background-color: yellow;
-
 			font-weight: 700;
 		}
 	}
