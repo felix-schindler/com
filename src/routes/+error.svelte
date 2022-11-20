@@ -21,7 +21,7 @@
 	 */
 	async function loadVotes(): Promise<void> {
 		try {
-			votes = (await pb.records.getFullList("error_voting")) as unknown as Vote[];
+			votes = (await pb.collection("error_voting").getFullList()) as unknown as Vote[];
 		} catch {
 			console.debug("Failed to load votes");
 		}
@@ -33,7 +33,7 @@
 	 */
 	async function updateVote(vote: Vote): Promise<void> {
 		try {
-			await pb.records.update("error_voting", vote.id, { votes: ++vote.votes });
+			await pb.collection("error_voting").update(vote.id, { votes: ++vote.votes });
 			voted = true;
 		} catch {
 			console.debug("Failed to update votes");

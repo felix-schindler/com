@@ -35,7 +35,7 @@
 	$: lastQuestionAnswered = qCount == allQuestions.length;
 
 	async function loadQuestions(answerIndex: string): Promise<void> {
-		const res = await pb.records.getFullList("register_questions", undefined, {
+		const res = await pb.collection("register_questions").getFullList(undefined, {
 			filter: `parent = ${answerIndex}`,
 		});
 

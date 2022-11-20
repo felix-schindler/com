@@ -10,7 +10,7 @@
 		Challenge auch nur zum Spaß machen! :)
 	</p>
 
-	{#await pb.records.getFullList("ctf_challenges")}
+	{#await pb.collection("ctf_challenges").getFullList()}
 		<p><Spinner /> Loading...</p>
 	{:then ctfs}
 		<div class="grid">
@@ -23,7 +23,7 @@
 						</div>
 						<button
 							type="button"
-							on:click={() => {
+							on:click={async () => {
 								if (confirm("Start this challenge?")) {
 									try {
 										let uid = localStorage.getItem("ctf_uuid");
@@ -31,7 +31,7 @@
 											uid = crypto.randomUUID();
 											localStorage.setItem("ctf_uuid", uid);
 										}
-										pb.records.create("ctf_stats", {
+										await pb.collection("ctf_stats").create({
 											uuid: uid,
 											challenge: ctf.id,
 											start: new Date().toISOString(),

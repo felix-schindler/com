@@ -3,6 +3,7 @@
 	import { page } from "$app/stores";
 
 	import { authStore } from "$lib/core/stores";
+	import type { User } from "$lib/core/types";
 
 	import Spinner from "$lib/components/Spinner.svelte";
 
@@ -20,11 +21,11 @@
 		const { pb } = await import("$lib/core/stores");
 
 		try {
-			$authStore = (await pb.users.authViaEmail(mail, pass)).user;
+			$authStore = (await pb.collection("users").authWithPassword(mail, pass)).record as User;
 			success = true;
 		} catch {
 			try {
-				$authStore = (await pb.admins.authViaEmail(mail, pass)).admin;
+				$authStore = (await pb.admins.authWithPassword(mail, pass)).admin;
 				success = true;
 			} catch (e) {
 				console.error(e);

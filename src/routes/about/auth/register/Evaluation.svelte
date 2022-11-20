@@ -26,7 +26,7 @@
 
 		const { pb } = await import("$lib/core/stores");
 		try {
-			await pb.records.create("register_user_answers", { mail, answers });
+			await pb.collection("register_user_answers").create({ mail, answers });
 			mail = "";
 			success = true;
 		} catch (e) {

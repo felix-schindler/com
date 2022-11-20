@@ -15,7 +15,7 @@
 		} else {
 			try {
 				const { pb } = await import("$lib/core/stores");
-				await pb.records.create("contact", { email, message });
+				await pb.collection("contact").create({ email, message });
 				success = true;
 				email = "";
 				message = "";

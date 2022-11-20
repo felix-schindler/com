@@ -64,6 +64,7 @@
 			div > span {
 				display: flex;
 				align-items: flex-start;
+				gap: 0.125em;
 			}
 		}
 

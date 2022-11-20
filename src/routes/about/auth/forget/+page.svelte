@@ -13,7 +13,7 @@
 		action = true;
 
 		try {
-			await pb.users.requestPasswordReset(mail);
+			await pb.collection("users").requestPasswordReset(mail);
 			success = true;
 		} catch {
 			success = false;
