@@ -16,9 +16,6 @@ const config = {
 	extensions: [".svelte", ".md"],
 
 	kit: {
-		version: {
-			name: "0.2.8-beta"
-		},
 		adapter: adapter()
 	}
 };
