@@ -6,7 +6,6 @@
 	<h1>Impressum</h1>
 	<address>
 		<p><b><i class="bi bi-mailbox" /> Felix Schindler</b></p>
-		<p>Theodor-Veiel-Straße 63</p>
 		<p>70374 Stuttgart</p>
 	</address>
 	<section>

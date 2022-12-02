@@ -4,6 +4,7 @@
 	import Changelog from "./Changelog.svelte";
 </script>
 
+<h1>Einstellungen</h1>
 <div class="ac">
 	<div>
 		<div>

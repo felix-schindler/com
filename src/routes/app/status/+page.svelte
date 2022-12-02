@@ -10,7 +10,7 @@
 <h1>System Status</h1>
 
 {#await pb.collection("services").getFullList(undefined, { filter: "" })}
-	<p><Spinner /> Loading...</p>
+	<p><Spinner /> Lädt...</p>
 {:then services}
 	{#if services && services.length > 0}
 		<div class="grid">
@@ -29,13 +29,13 @@
 						<p>
 							{#await ping(service.url)}
 								<Spinner />
-							{:then res}
-								{#if res == 5000}
+							{:then ms}
+								{#if ms == 5000}
 									<i class="bi bi-circle-fill red" />
 								{:else}
 									<i class="bi bi-circle-fill green" />
 								{/if}
-								{res} ms
+								{ms} ms
 							{/await}
 						</p>
 					</div>
@@ -43,7 +43,7 @@
 			{/each}
 		</div>
 	{:else}
-		<p>Sie haben im Moment keine Services gebucht.</p>
+		<p>Sie haben im Moment keine Services gebucht</p>
 	{/if}
 {/await}
 
