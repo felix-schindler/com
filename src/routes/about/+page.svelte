@@ -98,8 +98,34 @@
 					die dem User bereits vertraut vorkommen und sparen zusätzlich Zeit.
 				</p>
 				<p>
-					Durch jahrelange Erfahrung wissen wir, was wir tun.
-					<em>(pictures of notch, cookie banner, install prompt android, light house)</em>
+					<details>
+						<summary>Durch jahrelange Erfahrung wissen wir, was wir tun.</summary>
+						<p><em>Es funktioniert einfach.</em></p>
+						<h3>Dark Mode</h3>
+						<p>
+							Wir erfinden ihn nicht neu, sondern nehmen das, was vom Betriebssystem vorgegeben
+							wird. So sollte diese Webseite zum Beispiel auf Geräten mit einem OLED Display
+							Schwarz, auf anderen eher Grau sein.
+						</p>
+						<h3>Notch</h3>
+						<p>Egal ob iOS oder Android, man kann bei uns imemr alles sehen und bedienen.</p>
+						<div class="flex">
+							<img
+								src="/img/why-us/notch-others.jpeg"
+								alt="Statusleiste auf einem iPhone, in der Vorder- und Hintergrund weiß sind"
+								loading="lazy" />
+							<img
+								src="/img/why-us/notch-we.jpeg"
+								alt="Statusleiste auf einem iPhone, in der Vordergrund schwarz und Hintergrund weiß"
+								loading="lazy" />
+						</div>
+						<h3>Cookies</h3>
+						<p>Erst wenn der Nutzer zustimmt, werden entfernte Inhalte gelanden.</p>
+						<h3>PWA</h3>
+						<p>Alle Webseiten auch können wie eine App installiert und benutzt werden.</p>
+						<h3>Light House</h3>
+						<p>Perfect score, every time</p>
+					</details>
 					<img
 						src="/img/why-us/lighthouse.gif"
 						alt="Perfect Google Lighthouse (Website Speedtest) Result"
@@ -172,9 +198,26 @@
 				}
 			}
 
+			details {
+				margin-block: 1em;
+
+				div.flex {
+					display: flex;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					gap: 0.5em;
+
+					img {
+						max-width: calc(50% - 0.5em);
+						height: auto;
+					}
+				}
+			}
+
 			img {
 				max-width: 100%;
 				height: auto;
+				border-radius: var(--radius);
 			}
 		}
 	}
