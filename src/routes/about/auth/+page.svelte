@@ -8,14 +8,13 @@
 	import Spinner from "$lib/components/Spinner.svelte";
 
 	let mail: string, pass: string;
-	let success: boolean, action: boolean, loading: boolean;
+	let success: boolean, loading: boolean;
 
 	/**
 	 * Doesn't return anything but set's `success` and `action`
 	 */
 	async function login(): Promise<void> {
 		loading = true;
-		action = true;
 		success = false;
 
 		const { pb } = await import("$lib/core/stores");
@@ -27,9 +26,7 @@
 			try {
 				$authStore = (await pb.admins.authWithPassword(mail, pass)).admin;
 				success = true;
-			} catch (e) {
-				console.error(e);
-			}
+			} catch {}
 		} finally {
 			loading = false;
 		}
@@ -37,7 +34,7 @@
 		if (success) {
 			mail = "";
 			pass = "";
-			goto($page.url.searchParams.get("next") ?? "/app");
+			await goto($page.url.searchParams.get("next") ?? "/app");
 		}
 	}
 </script>
@@ -55,7 +52,7 @@
 			<a href="/about/auth/forget">Passwort vegessen</a>
 			<div>
 				<button type="reset">Clear</button>
-				<button type="submit" disabled={loading || (action && success) || !mail || !pass}>
+				<button type="submit" disabled={loading || success || !mail || !pass}>
 					{#if loading}
 						<Spinner />
 					{/if}
@@ -63,7 +60,7 @@
 				</button>
 			</div>
 		</div>
-		{#if action && !loading && !success}
+		{#if loading == false && !success}
 			<p>Failed to log in.</p>
 		{/if}
 	</form>

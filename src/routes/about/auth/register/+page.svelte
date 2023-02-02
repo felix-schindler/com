@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { tooltip } from "svooltip";
-	import "svooltip/svooltip.css";
+	import "svooltip/styles.css";
 
 	import type { Question, Answer, GivenAnswer } from "$lib/core/types";
 
