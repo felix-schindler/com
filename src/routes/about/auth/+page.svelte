@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		{#if loading == false && !success}
-			<p>Failed to log in.</p>
+			<p class="red">E-Mail oder Passwort ist falsch</p>
 		{/if}
 	</form>
 </div>
@@ -76,6 +76,10 @@
 
 		.msg-btns {
 			flex-direction: column-reverse;
+		}
+
+		p.red {
+			color: red;
 		}
 	}
 
