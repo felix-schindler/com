@@ -1,29 +1,24 @@
 <script lang="ts">
 	import Spinner from "$lib/components/Spinner.svelte";
 
-	let email = "",
-		message = "",
+	let email: string,
+		message: string,
 		sending = false,
 		success: undefined | boolean;
 
 	async function submit(): Promise<void> {
 		sending = true;
 
-		if (email == "" || message == "") {
-			sending = false;
+		try {
+			const { pb } = await import("$lib/core/stores");
+			await pb.collection("contact").create({ email, message });
+			success = true;
+			email = "";
+			message = "";
+		} catch {
 			success = false;
-		} else {
-			try {
-				const { pb } = await import("$lib/core/stores");
-				await pb.collection("contact").create({ email, message });
-				success = true;
-				email = "";
-				message = "";
-			} catch {
-				success = false;
-			} finally {
-				sending = false;
-			}
+		} finally {
+			sending = false;
 		}
 	}
 </script>
