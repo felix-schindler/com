@@ -6,3 +6,4 @@ Gut dokumentiert für einen einfacheren Start.
 
 - [Getting Started](./docs/getting-started)
 - [Mentality](./docs/mentality)
+- [Backend (PocketBase)](./docs/backend)
