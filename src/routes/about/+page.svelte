@@ -169,7 +169,7 @@
 			font-size: 12.5vh;
 
 			color: transparent;
-			background-image: linear-gradient((120deg, var(--accent), blue));
+			background-image: linear-gradient((120deg, #ff1010, #1f2e41));
 			background-clip: text;
 			-webkit-background-clip: text;
 			background-size: cover;

@@ -8,10 +8,10 @@ a[role="button"] {
 	font-weight: normal;
 
 	color: white;
-	background-color: black;
+	background-color: var(--dark);
 
 	padding: 0.4em 0.6em;
-	border: 1px solid black;
+	border: 1px solid var(--dark);
 	border-radius: var(--radius);
 	margin: 0;
 
@@ -27,12 +27,12 @@ a[role="button"].inverse {
 button.inverse:hover:not(:disabled),
 a[role="button"].inverse:hover:not(:disabled) {
 	color: white;
-	background-color: black;
+	background-color: var(--dark);
 }
 
 button:hover:not(:disabled),
 a[role="button"]:hover:not(:disabled) {
-	color: black;
+	color: var(--dark);
 	background-color: transparent;
 }
 
@@ -57,7 +57,7 @@ a[role="button"] {
 
 	button,
 	a[role="button"] {
-		color: black;
+		color: var(--dark);
 		background-color: white;
 		border-color: white;
 	}
@@ -70,7 +70,7 @@ a[role="button"] {
 
 	button.inverse:hover:not(:disabled),
 	a[role="button"].inverse:hover:not(:disabled) {
-		color: black;
+		color: var(--dark);
 		background-color: white;
 	}
 }
