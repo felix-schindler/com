@@ -22,7 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"mdsvex": "^0.10.6",
+		"mdsvex": "^0.11.0",
 		"pocketbase": "^0.14.4",
 		"sass": "^1.62.1",
 		"svelte-local-storage-store": "^0.4.0"
