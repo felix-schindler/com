@@ -710,10 +710,10 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-pocketbase@^0.17.2:
-  version "0.17.2"
-  resolved "https://registry.yarnpkg.com/pocketbase/-/pocketbase-0.17.2.tgz#07c486d569f428c73890d4690a9edd98a029d9bc"
-  integrity sha512-sJhNRxXKjCoVyzZyqlTLJxzjS7IJ/9xgJhKSAZYY5X7q4V3U62xFG9F6E7frIbuvgrtq64In6l6CAucRSQYpmg==
+pocketbase@^0.17.3:
+  version "0.17.3"
+  resolved "https://registry.yarnpkg.com/pocketbase/-/pocketbase-0.17.3.tgz#bce74cd7259b63b25ac07a7bbcaf87176f6ae4ba"
+  integrity sha512-tqtk7kd8K4/5BspCzqf8DcbjS+iCBLFdpC7s/d6hAuxeoqP5MH6llRICm22dldJDFcTa1chuCfyeeKoU5mYaHQ==
 
 postcss@^8.4.27:
   version "8.4.27"
