@@ -24,7 +24,7 @@
 	"dependencies": {
 		"mdsvex": "^0.11.0",
 		"pocketbase": "^0.18.0",
-		"sass": "^1.66.1",
+		"sass": "^1.67.0",
 		"svelte-local-storage-store": "^0.6.0"
 	}
 }
