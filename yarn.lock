@@ -909,10 +909,10 @@ svelte@^4.2.1:
     magic-string "^0.30.0"
     periscopic "^3.1.0"
 
-svooltip@^0.7.4:
-  version "0.7.4"
-  resolved "https://registry.npmjs.org/svooltip/-/svooltip-0.7.4.tgz"
-  integrity sha512-2HAvhzDgHulEe9aS88aa30HuiigOw56ePxK5djp/hSaBPlEbOsvQtxEs3mmUq0rF951f45chIJ83GeVV1PT+2A==
+svooltip@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/svooltip/-/svooltip-0.7.5.tgz#95968157f4a7ef4b3afaee5a7eff04c18cf69aff"
+  integrity sha512-yGnzlUnOfEmnTdUl/Za86M4dgP3QUnhUMLji5tU7BmX4tfTjtM8KKKhG5AvAP78glBq7ONi5yTa5gCGECcMLzA==
   dependencies:
     "@floating-ui/dom" "^1.2.4"
 
