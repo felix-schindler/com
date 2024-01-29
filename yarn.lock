@@ -899,10 +899,10 @@ svelte@^4.2.9:
     magic-string "^0.30.4"
     periscopic "^3.1.0"
 
-svooltip@^0.7.6:
-  version "0.7.6"
-  resolved "https://registry.yarnpkg.com/svooltip/-/svooltip-0.7.6.tgz#d89d2b2345b01c304dd6ea0abcc9423ca0de8311"
-  integrity sha512-/cmsJBewFsund6GbN4NCpYeFH4AlhKDnuXDdn3mIjMhFUljfR5JNfK028GGkits3eFN0sIWMkf6Vo339CRK7Fg==
+svooltip@^0.7.7:
+  version "0.7.7"
+  resolved "https://registry.yarnpkg.com/svooltip/-/svooltip-0.7.7.tgz#12020e77f38711a03fba1810e88ccf1bb68fcee5"
+  integrity sha512-YAZcNu+WRr9EpiIE8hg/NlMISnYjs43jeI3E/kn3VTuLt1kmNtBKkg6cA/E9mBpGP14pRQDzxT7KLPLGyuBr9A==
   dependencies:
     "@floating-ui/dom" "^1.5.4"
 
